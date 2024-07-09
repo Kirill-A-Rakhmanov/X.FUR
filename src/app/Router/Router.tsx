@@ -1,10 +1,10 @@
-import Layout from "@/pages/Layout/ui/Layout";
+import App from "@/App";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 const routes: RouteObject[] = [
   {
     path: "/",
-    element: <Layout />,
+    element: <App />,
     children: [],
   },
 ];
