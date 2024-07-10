@@ -4,9 +4,13 @@
 @import "./components/all";
 
 .wrapper {
-  min-height: 100%;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+main {
+  flex-grow: 1;
 }

@@ -12,6 +12,10 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
     type: "asset/resource",
   };
 
+  const fontLoader = {
+    test: /\.(woff|woff2|eot|ttf|otf)$/i,
+    type: "asset/resource",
+  };
   const svgrLoader = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
@@ -82,5 +86,5 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
 
   const babelLoader = buildBabelLoader(options);
 
-  return [assetLoader, scssLoader, babelLoader, svgrLoader];
+  return [assetLoader, scssLoader, babelLoader, svgrLoader, fontLoader];
 }
