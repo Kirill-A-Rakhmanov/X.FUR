@@ -1,10 +1,73 @@
+@import "../../../scss/libs/variables";
+
 .trending {
+  margin: 80px 0px 0px 0px;
 }
 .container {
 }
 .content {
 }
 .header {
+  font-size: 28px;
+  font-weight: 600;
 }
+.itemsWrapper {
+  position: relative;
+}
+
 .items {
+  margin: 40px 0px 0px 0px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.move {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: #2b2b2b;
+  }
+}
+.moveToRight {
+  transform: translateX(50%) translateY(-50%);
+  right: 0;
+}
+.moveToLeft {
+  transform: rotate(180deg) translateX(50%) translateY(50%);
+  left: 0;
+}
+
+.arrow {
+  color: $white;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0px 0px 0px 2px;
+}
+
+.scroll {
+  margin: 40px 0px 0px 0px;
+  position: relative;
+  height: 2px;
+  width: 100%;
+  background-color: $gray-hover;
+}
+.scrollBar {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-color: $black;
 }
