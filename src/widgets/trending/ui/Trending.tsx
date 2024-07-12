@@ -33,13 +33,17 @@ const Trending = () => {
 
   return (
     <section className={styles.trending}>
-      <div className={[styles.container && "", "_container"].join(" ")}>
+      <div
+        className={[
+          styles.container ? styles.container : "",
+          "_container",
+        ].join(" ")}
+      >
         <div className={styles.content}>
           <h2 className={styles.header}>Trending now</h2>
           <div className={styles.itemsWrapper}>
             <div
               ref={itemsContainerRef}
-              // onScroll={handleScroll}
               onScroll={handleThrottleScroll}
               className={styles.items}
             >
