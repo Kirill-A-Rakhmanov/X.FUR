@@ -4,7 +4,7 @@ import styles from "./Footer.module.scss";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container + "_container"}>
+      <div className={[styles.container, "_container"].join(" ")}>
         <div className={styles.news}>
           <div className={styles.newsHeader}>Newsletter</div>
           <form className={styles.newsForm}>

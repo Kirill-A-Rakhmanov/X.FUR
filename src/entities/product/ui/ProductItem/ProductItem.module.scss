@@ -8,6 +8,10 @@
   &:hover .title::after {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    flex: 0 0 260px;
+  }
 }
 .image {
   position: relative;
