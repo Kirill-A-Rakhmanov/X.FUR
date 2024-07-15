@@ -6,6 +6,8 @@ import Header from "./widgets/header/ui/Header";
 import Footer from "./widgets/footer/ui/Footer";
 import Hero from "./widgets/hero/ui/Hero";
 import Trending from "./widgets/trending/ui/Trending";
+import Creative from "./widgets/creative/ui/Creative";
+import Inspiration from "./widgets/inspiration/ui/Inspiration";
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
       <main className="page">
         <Hero />
         <Trending />
+        <Creative />
+        <Inspiration />
       </main>
       <Footer />
     </div>
