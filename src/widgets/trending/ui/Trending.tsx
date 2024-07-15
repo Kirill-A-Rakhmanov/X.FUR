@@ -6,30 +6,37 @@ import ProductItem from "@/entities/product/ui/ProductItem/ProductItem";
 import ArrowIcon from "@/assets/icons/arrow-right.svg";
 
 const Trending = () => {
-  const [scrollPosition, setScrollPosition] = React.useState(0);
-  const itemsContainerRef = React.useRef(null);
-  const itemsScrollLength = React.useRef(0);
-  const throttleInProgress = React.useRef(null);
+  const scrollStepWidth = 400;
 
-  function handleThrottleScroll() {
-    if (throttleInProgress.current) {
-      return;
-    }
-    throttleInProgress.current = true;
-    setTimeout(() => {
-      const { scrollLeft } = itemsContainerRef.current;
-      setScrollPosition((scrollLeft / itemsScrollLength.current) * 100);
-      throttleInProgress.current = false;
-    }, 10);
-  }
+  const [scrollPosition, setScrollPosition] = React.useState(0);
+  const [scrollWidth, setScrollWidth] = React.useState(0);
+
+  const itemsContainerRef = React.useRef(null);
 
   React.useEffect(() => {
     if (itemsContainerRef) {
-      const scrollWidth = itemsContainerRef.current.scrollWidth;
-      const offsetWidth = itemsContainerRef.current.offsetWidth;
-      itemsScrollLength.current = scrollWidth - offsetWidth;
+      setScrollWidth(
+        itemsContainerRef.current.scrollWidth -
+          itemsContainerRef.current.offsetWidth
+      );
     }
   }, []);
+
+  function handleButtonScroll(scrollAmount: number) {
+    const newScrollPosition = scrollPosition + scrollAmount;
+    if (newScrollPosition < 0) {
+      setScrollPosition(0);
+    } else if (newScrollPosition > scrollWidth) {
+      setScrollPosition(scrollWidth);
+    } else {
+      setScrollPosition(newScrollPosition);
+    }
+    itemsContainerRef.current.scrollLeft = newScrollPosition;
+  }
+
+  function handleScroll() {
+    setScrollPosition(itemsContainerRef.current.scrollLeft);
+  }
 
   return (
     <section className={styles.trending}>
@@ -44,7 +51,9 @@ const Trending = () => {
           <div className={styles.itemsWrapper}>
             <div
               ref={itemsContainerRef}
-              onScroll={handleThrottleScroll}
+              onScroll={() => {
+                handleScroll();
+              }}
               className={styles.items}
             >
               <ProductItem />
@@ -56,19 +65,29 @@ const Trending = () => {
               <ProductItem />
             </div>
             {scrollPosition > 0 && (
-              <div className={[styles.moveToLeft, styles.move].join(" ")}>
+              <div
+                onClick={() => {
+                  handleButtonScroll(-scrollStepWidth);
+                }}
+                className={[styles.moveToLeft, styles.move].join(" ")}
+              >
                 <ArrowIcon className={styles.arrow} />
               </div>
             )}
-            {scrollPosition < 100 && (
-              <div className={[styles.moveToRight, styles.move].join(" ")}>
+            {scrollPosition < scrollWidth && (
+              <div
+                onClick={() => {
+                  handleButtonScroll(scrollStepWidth);
+                }}
+                className={[styles.moveToRight, styles.move].join(" ")}
+              >
                 <ArrowIcon className={styles.arrow} />
               </div>
             )}
           </div>
-          <div className={styles.scroll}>
-            <div className={styles.scrollBar}></div>
-          </div>
+          {/* <div className={styles.scroll}>
+            <div className={styles.scrollBar}></div> //todo: сделать рабочий скролл
+          </div> */}
         </div>
       </div>
     </section>
