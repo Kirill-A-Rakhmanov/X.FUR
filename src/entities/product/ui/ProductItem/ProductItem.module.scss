@@ -8,6 +8,9 @@
   &:hover .title::after {
     width: 100%;
   }
+  @media (max-width: 768px) {
+    flex: 0 0 200px;
+  }
 }
 .image {
   position: relative;
@@ -35,11 +38,17 @@
     width: 0;
     background-color: $black;
   }
+  @media (max-width: 769px) {
+    font-size: 14px;
+  }
 }
 .subtitle {
   font-size: 16px;
   font-weight: 400;
   color: #484848;
+  @media (max-width: 769px) {
+    font-size: 14px;
+  }
 }
 .info {
   display: flex;
@@ -49,6 +58,9 @@
 .price {
   font-size: 30px;
   font-weight: 600;
+  @media (max-width: 769px) {
+    font-size: 24px;
+  }
 }
 .actions {
   display: flex;
@@ -62,6 +74,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  @media (max-width: 769px) {
+    width: 32px;
+    height: 32px;
+  }
 }
 .addToCart {
   color: $white;
@@ -78,4 +94,7 @@
 .icon {
   font-size: 18px;
   font-weight: 600;
+  @media (max-width: 769px) {
+    font-size: 16px;
+  }
 }
