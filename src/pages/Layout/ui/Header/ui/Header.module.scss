@@ -1,0 +1,100 @@
+@import "~@/scss/variables.scss";
+
+.header {
+  .container {
+    min-height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template: 1fr / 120px 1fr 120px;
+    align-items: center;
+    // gap: 20px;
+    @media (max-width: 768px) {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+      row-gap: 10px;
+    }
+  }
+
+  .logo {
+    @media (max-width: 768px) {
+    }
+  }
+
+  .search {
+    @media (max-width: 768px) {
+      order: 3;
+      grid-column: span 2;
+    }
+  }
+
+  .info {
+    justify-self: end;
+    display: flex;
+    gap: 10px;
+  }
+  .iconWrapper {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      background-color: $gray-hover;
+    }
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+  .iconCount {
+    font-family: "Roboto";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    background-color: $accent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+  }
+}
+
+.search {
+  .searchField {
+    margin: 0 auto;
+    max-width: 540px;
+    height: 50px;
+    background-color: $gray;
+    padding: 0px 16px;
+    border-radius: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: text;
+    &:hover {
+      background-color: $gray-hover;
+    }
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+  .searchIcon {
+    font-size: 24px;
+  }
+  .searchInput {
+    flex: 1 1 auto;
+    height: 100%;
+    font-size: 16px;
+    background-color: transparent;
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+}

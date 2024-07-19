@@ -1,15 +1,22 @@
 [
   {
+    "id": "0001",
     "title": "SÖDERHAMN",
     "subtitle": "3-seat section",
     "description": "If you like the stylish airy look, you have to try the deep generous seats. Create your own personal combination of SÖDERHAMN sofa, then sit down and relax – by yourself or together with the whole family.",
-    "type": "sofa",
+    "category": "sofa",
     "rating": 45,
+    "basePrice": 499,
+    "articles": [
+      "393.054.15",
+      "694.495.68",
+      "394.520.53"
+    ],
     "collection": ["living room"],
     "colors": [
       {
         "article": "393.054.15",
-        "name": "Gunnared beige",
+        "color": "Gunnared beige",
         "price": 499,
         "images": [
           "https://www.ikea.com/fi/en/images/products/soederhamn-3-seat-section-gunnared-beige__0766696_pe753866_s5.jpg?f=m",
@@ -20,7 +27,7 @@
       },
       {
         "article": "694.495.68",
-        "name": "Fridtuna dark grey",
+        "color": "Fridtuna dark grey",
         "price": 529,
         "images": [
           "https://www.ikea.com/fi/en/images/products/soederhamn-3-seat-section-fridtuna-dark-grey__1057701_pe848915_s5.jpg?f=m",
@@ -31,7 +38,7 @@
       },
       {
         "article": "394.520.53",
-        "name": "Tonerud grey",
+        "color": "Tonerud grey",
         "price": 449,
         "images": [
           "https://www.ikea.com/fi/en/images/products/soederhamn-3-seat-section-tonerud-grey__1057813_pe848995_s5.jpg?f=m",
@@ -49,11 +56,17 @@
     }
   },
   {
+    "id": "0002",
     "title": "RANARP",
     "subtitle": "Floor/reading lamp",
     "description": "RANARP lamps are reminiscent of the past, crafted with details like the steel joints and striped textile cord. The floor and work lamps are heavy and very stable, yet fully adjustable.",
-    "type": "lamp",
+    "category": "lamp",
     "rating": 40,
+    "basePrice": 59,
+    "articles": [
+      "202.313.06",
+      "903.313.74"
+    ],
     "collection": [
       "bedroom",
       "living room",
@@ -62,7 +75,7 @@
     "colors": [
       {
         "article": "202.313.06",
-        "name": "Off-white",
+        "color": "Off-white",
         "price": 59,
         "images": [
           "https://www.ikea.com/fi/en/images/products/ranarp-floor-reading-lamp-off-white__0606895_pe682605_s5.jpg?f=m",
@@ -73,7 +86,7 @@
       },
       {
         "article": "903.313.74",
-        "name": "Black",
+        "color": "Black",
         "price": 59,
         "images": [
           "https://www.ikea.com/fi/en/images/products/ranarp-floor-reading-lamp-black__0606896_pe682604_s5.jpg?f=m",
@@ -90,18 +103,25 @@
     }
   },
   {
+    "id": "0003",
     "title": "HOLMSUND",
     "subtitle": "Corner sofa-bed",
     "description": "This sofa quickly and easily transforms into a spacious bed – and turns the living room into a bedroom. The storage space under the seat is easy to access and has room for bedlinens, pillows and a good book.",
-    "type": "sofa",
+    "category": "sofa",
     "rating": 40,
+    "basePrice": 859,
+    "articles": [
+      "292.282.05",
+      "695.168.93",
+      "495.112.93"
+    ],
     "collection": [
       "bedroom"
     ],
     "colors": [
       {
         "article": "292.282.05",
-        "name": "Orrsta light blue",
+        "color": "Orrsta light blue",
         "price": 799,
         "images": [
           "https://www.ikea.com/fi/en/images/products/holmsund-corner-sofa-bed-orrsta-light-blue__0532354_pe648004_s5.jpg?f=m",
@@ -112,7 +132,7 @@
       },
       {
         "article": "695.168.93",
-        "name": "Borgunda dark grey",
+        "color": "Borgunda dark grey",
         "price": 859,
         "images": [
           "https://www.ikea.com/fi/en/images/products/holmsund-corner-sofa-bed-borgunda-dark-grey__1212713_pe910718_s5.jpg?f=m",
@@ -122,7 +142,7 @@
       },
       {
         "article": "495.112.93",
-        "name": "Kilanda dark blue",
+        "color": "Kilanda dark blue",
         "price": 809,
         "images": [
           "https://www.ikea.com/fi/en/images/products/holmsund-corner-sofa-bed-kilanda-dark-blue__1212724_pe910729_s5.jpg?f=m",
@@ -140,18 +160,24 @@
     }
   },
   {
+    "id": "0004",
     "title": "ÄLVDALEN",
     "subtitle": "3-seat sofa-bed",
     "description": "It might be hard to believe that a comfy bed is hidden in this stylish sofa. ÄLVDALEN is easy to fold out to get a good night's sleep, comes with a storage space under the seat – and many features to love.",
-    "type": "sofa",
+    "category": "sofa",
     "rating": 35,
+    "basePrice": 369,
+    "articles": [
+      "505.306.48",
+      "804.625.96"
+    ],
     "collection": [
       "bedroom"
     ],
     "colors": [
       {
         "article": "505.306.48",
-        "name": "Knisa grey-beige",
+        "color": "Knisa grey-beige",
         "price": 369,
         "images": [
           "https://www.ikea.com/fi/en/images/products/aelvdalen-3-seat-sofa-bed-knisa-grey-beige__1194633_pe902030_s5.jpg?f=m",
@@ -162,7 +188,7 @@
       },
       {
         "article": "804.625.96",
-        "name": "Knisa dark grey",
+        "color": "Knisa dark grey",
         "price": 369,
         "images": [
           "https://www.ikea.com/fi/en/images/products/aelvdalen-3-seat-sofa-bed-knisa-dark-grey__1194636_pe902033_s5.jpg?f=m",
@@ -180,11 +206,16 @@
     }
   },
   {
+    "id": "0005",
     "title": "VÅGHÖJD",
     "subtitle": "LED floor lamp",
     "description": "A pendant lamp on the floor? Of course! You can rotate the arm and the head’s angle as needed. The upward light is always weaker than the downward light. Use the built-in dimmer to adjust the intensity.",
-    "type": "lamp",
+    "category": "lamp",
     "rating": 35,
+    "basePrice": 169,
+    "articles": [
+      "105.012.71"
+    ],
     "collection": [
       "bedroom",
       "electronics"
@@ -192,7 +223,7 @@
     "colors": [
       {
         "article": "105.012.71",
-        "name": "dimmable black",
+        "color": "dimmable black",
         "price": 169,
         "images": [
           "https://www.ikea.com/fi/en/images/products/vaghoejd-led-floor-lamp-dimmable-black__1126257_pe875659_s5.jpg?f=m",
@@ -208,19 +239,24 @@
     }
   },
   {
+    "id": "0006",
     "title": "SÄBÖVIK",
     "subtitle": "Divan bed",
     "size": "160x200 cm",
     "description": "A complete bed designed to be comfortable both for sleeping and reading. It provides nice support where needed, has a soft feel where possible – and is smartly packaged, making it easy to transport.",
-    "type": "bed",
+    "category": "bed",
     "rating": 40,
+    "basePrice": 449,
+    "articles": [
+      "493.857.51"
+    ],
     "collection": [
       "bedroom"
     ],
     "colors": [
       {
         "article": "493.857.51",
-        "name": "firm/Vissle grey",
+        "color": "firm/Vissle grey",
         "price": 449,
         "images": [
           "https://www.ikea.com/fi/en/images/products/saeboevik-divan-bed-firm-vissle-grey__0891216_pe782251_s5.jpg?f=m",
@@ -238,12 +274,18 @@
     }
   },
   {
+    "id": "0007",
     "title": "STOENSE",
     "subtitle": "Rug, low pile",
     "size": "200x300 cm",
     "description": "The thick, soft-spun pile is all about comfort, combined with gentle colours and a light sheen that bring harmony to the room. Large floor? Place several rugs together – the thick pile conceals the edges.",
-    "type": "rug",
+    "category": "rug",
     "rating": 45,
+    "basePrice": 119,
+    "articles": [
+      "304.268.36",
+      "204.268.08"
+    ],
     "collection": [
       "bedroom",
       "living room"
@@ -251,7 +293,7 @@
     "colors": [
       {
         "article": "304.268.36",
-        "name": "medium grey",
+        "color": "medium grey",
         "price": 119,
         "images": [
           "https://www.ikea.com/fi/en/images/products/stoense-rug-low-pile-medium-grey__0624399_pe691812_s5.jpg?f=m",
@@ -261,7 +303,7 @@
       },
       {
         "article": "204.268.08",
-        "name": "Off-white",
+        "color": "Off-white",
         "price": 119,
         "images": [
           "https://www.ikea.com/fi/en/images/products/stoense-rug-low-pile-off-white__0624402_pe691814_s5.jpg?f=m",
@@ -277,11 +319,18 @@
     }
   },
   {
+    "id": "0008",
     "title": "HYLTARP",
     "subtitle": "3-seat sofa",
     "description": "HYLTARP is an inviting family sofa where everyone wants to spend lots of time. It’s very comfy, has all the essential features – and a classic, clean-lined look that is also pleasing on the eye.",
-    "type": "sofa",
+    "category": "sofa",
     "rating": 50,
+    "basePrice": 649,
+    "articles": [
+      "494.896.40",
+      "994.896.28",
+      "695.149.26"
+    ],
     "collection": [
       "bedroom",
       "living room"
@@ -289,7 +338,7 @@
     "colors": [
       {
         "article": "494.896.40",
-        "name": "Hallarp white",
+        "color": "Hallarp white",
         "price": 649,
         "images": [
           "https://www.ikea.com/fi/en/images/products/hyltarp-3-seat-sofa-hallarp-white__1193806_pe901633_s5.jpg?f=m",
@@ -299,7 +348,7 @@
       },
       {
         "article": "994.896.28",
-        "name": "Gransel grey-brown",
+        "color": "Gransel grey-brown",
         "price": 699,
         "images": [
           "https://www.ikea.com/fi/en/images/products/hyltarp-3-seat-sofa-gransel-grey-brown__1193816_pe901643_s5.jpg?f=m",
@@ -309,7 +358,7 @@
       },
       {
         "article": "695.149.26",
-        "name": "Gransel grey",
+        "color": "Gransel grey",
         "price": 699,
         "images": [
           "https://www.ikea.com/fi/en/images/products/hyltarp-3-seat-sofa-gransel-grey__1193810_pe901637_s5.jpg?f=m",
@@ -326,12 +375,18 @@
     }
   },
   {
+    "id": "0009",
     "title": "TIDTABELL",
     "subtitle": "Rug, flatwoven",
     "size": "170x240 cm",
     "description": "This flatwoven rug in a gentle melange of beige tones adds warmth to your space and comfort under your feet. A timeless appeal created with wool.",
-    "type": "rug",
+    "category": "rug",
     "rating": 25,
+    "basePrice": 179,
+    "articles": [
+      "305.552.82",
+      "405.618.62"
+    ],
     "collection": [
       "bedroom",
       "living room"
@@ -339,7 +394,7 @@
     "colors": [
       {
         "article": "305.552.82",
-        "name": "Beige",
+        "color": "Beige",
         "price": 179,
         "images": [
           "https://www.ikea.com/fi/en/images/products/tidtabell-rug-flatwoven-beige__1185180_pe898299_s5.jpg?f=m",
@@ -350,7 +405,7 @@
       },
       {
         "article": "405.618.62",
-        "name": "Grey-blue",
+        "color": "Grey-blue",
         "price": 179,
         "images": [
           "https://www.ikea.com/fi/en/images/products/tidtabell-rug-flatwoven-grey-blue__1185074_pe898255_s5.jpg?f=m",
@@ -365,18 +420,24 @@
     }
   },
   {
+    "id": "0010",
     "title": "BACKSÄLEN",
     "subtitle": "3-seat sofa",
     "description": "This sofa is easy on the eyes and body. The design is welcoming, the deep seat and the high back and armrests embrace you – and it’s also super easy to remove the cover and wash it.",
-    "type": "sofa",
+    "category": "sofa",
     "rating": 0,
+    "basePrice": 599,
+    "articles": [
+      "193.931.54",
+      "493.931.57"
+    ],
     "collection": [
       "living room"
     ],
     "colors": [
       {
         "article": "193.931.54",
-        "name": "Blekinge white",
+        "color": "Blekinge white",
         "price": 599,
         "images": [
           "https://www.ikea.com/fi/en/images/products/backsaelen-3-seat-sofa-blekinge-white__0950634_pe800555_s5.jpg?f=m",
@@ -387,7 +448,7 @@
       },
       {
         "article": "493.931.57",
-        "name": "Hallarp grey",
+        "color": "Hallarp grey",
         "price": 649,
         "images": [
           "https://www.ikea.com/fi/en/images/products/backsaelen-3-seat-sofa-hallarp-grey__0950638_pe800559_s5.jpg?f=m",
@@ -405,19 +466,24 @@
     }
   },
   {
+    "id": "0011",
     "title": "MOJNA",
     "subtitle": "Pendant lamp shade",
     "size": "47 cm",
     "description": "This lampshade provides a soft, decorative light. It is also made of recycled plastic and renewable viscose – and comes in a flat-pack. Everything to reduce our environmental impact.",
-    "type": "lamp",
+    "category": "lamp",
     "rating": 0,
+    "basePrice": 29,
+    "articles": [
+      "304.518.64"
+    ],
     "collection": [
       "living room"
     ],
     "colors": [
       {
         "article": "304.518.64",
-        "name": "textile/white",
+        "color": "textile/white",
         "price": 29,
         "images": [
           "https://www.ikea.com/fi/en/images/products/mojna-pendant-lamp-shade-textile-white__0828648_pe776668_s5.jpg?f=m",
@@ -433,19 +499,25 @@
     }
   },
   {
+    "id": "0012",
     "title": "VOLLERSLEV",
     "subtitle": "Rug, high pile",
     "size": "160x230 cm",
     "description": "A new take on traditional shaggy! The long white pile is woven with varying yarn thicknesses to create a soft, irresistible texture that is also cosy to sit, walk, play or lie on.",
-    "type": "rug",
+    "category": "rug",
     "rating": 50,
+    "basePrice": 199,
+    "articles":[
+      "304.925.72",
+      "604.925.61"
+    ],
     "collection": [
       "living room"
     ],
     "colors": [
       {
         "article": "304.925.72",
-        "name": "White",
+        "color": "White",
         "price": 199,
         "images": [
           "https://www.ikea.com/fi/en/images/products/vollerslev-rug-high-pile-white__0933663_pe792171_s5.jpg?f=m",
@@ -455,7 +527,7 @@
       },
       {
         "article": "604.925.61",
-        "name": "Dark blue",
+        "color": "Dark blue",
         "price": 199,
         "images": [
           "https://www.ikea.com/fi/en/images/products/vollerslev-rug-high-pile-dark-blue__0933595_pe792162_s5.jpg?f=m",
@@ -471,19 +543,25 @@
     }
   },
   {
+    "id": "0013",
     "title": "LISTERBY",
     "subtitle": "Coffee table",
     "size": "90 cm",
     "description": "This robust table with generous dimensions lasts a long time since lacquer protects the hardwearing oak and preserves the natural wood feel. Sturdy and with a genuine character – year after year.",
-    "type": "table",
+    "category": "table",
     "rating": 40,
+    "basePrice": 169,
+    "articles":[
+      "505.153.13",
+      "405.622.44"
+    ],
     "collection": [
       "living room"
     ],
     "colors": [
       {
         "article": "505.153.13",
-        "name": "Oak veneer",
+        "color": "Oak veneer",
         "price": 169,
         "images": [
           "https://www.ikea.com/fi/en/images/products/listerby-coffee-table-oak-veneer__1022538_pe832796_s5.jpg?f=m",
@@ -494,7 +572,7 @@
       },
       {
         "article": "405.622.44",
-        "name": "Dark brown beech veneer",
+        "color": "Dark brown beech veneer",
         "price": 149,
         "images": [
           "https://www.ikea.com/fi/en/images/products/listerby-coffee-table-dark-brown-beech-veneer__1170197_pe892712_s5.jpg?f=m",
@@ -511,18 +589,24 @@
     }
   },
   {
+    "id": "0014",
     "title": "LANDSKRONA",
     "subtitle": "Three-seat sofa",
     "description": "Luxury made our way. We used resilient foam filling for comfort, thick grain leather on the contact areas – because it looks amazing, and durable coated fabric elsewhere to keep the price down.",
-    "type": "sofa",
+    "category": "sofa",
     "rating": 50,
+    "basePrice": 899,
+    "articles":[
+      "590.316.98",
+      "092.702.95"
+    ],
     "collection": [
       "living room"
     ],
     "colors": [
       {
         "article": "590.316.98",
-        "name": "Grann/Bomstad black",
+        "color": "Grann/Bomstad black",
         "price": 899,
         "images": [
           "https://www.ikea.com/fi/en/images/products/landskrona-three-seat-sofa-grann-bomstad-black-metal__0321002_pe514786_s5.jpg?f=m",
@@ -533,7 +617,7 @@
       },
       {
         "article": "092.702.95",
-        "name": "Grann/Bomstad golden-brown",
+        "color": "Grann/Bomstad golden-brown",
         "price": 899,
         "images": [
           "https://www.ikea.com/fi/en/images/products/landskrona-3-seat-sofa-grann-bomstad-golden-brown-metal__0602109_pe680178_s5.jpg?f=m",
@@ -551,19 +635,24 @@
     }
   },
   {
+    "id": "0015",
     "title": "LISABO",
     "subtitle": "Coffee table",
     "size": "118x50 cm",
     "description": "We’re proud of our LISABO series, awarded with the prestigious, international Red Dot Award, for its design. The products are durable, sturdy and easy to assemble, yet look light and hand-crafted.",
-    "type": "table",
+    "category": "table",
     "rating": 40,
+    "basePrice": 139,
+    "articles":[
+      "702.976.58"
+    ],
     "collection": [
       "living room"
     ],
     "colors": [
       {
         "article": "702.976.58",
-        "name": "Ash veneer",
+        "color": "Ash veneer",
         "price": 139,
         "images": [
           "https://www.ikea.com/fi/en/images/products/lisabo-coffee-table-ash-veneer__0735609_pe740032_s5.jpg?f=m",
@@ -581,19 +670,24 @@
     }
   },
   {
+    "id": "0016",
     "title": "TÅNUM",
     "subtitle": "Rug, flatwoven",
     "size": "60x90 cm",
     "description": "Leftover cotton fabric from our textile production has been transformed into unique, handmade TÅNUM rugs. The colours vary from rug to rug, so come to the store and pick the one you like the most.",
-    "type": "rug",
+    "category": "rug",
     "rating": 45,
+    "basePrice": 4.99,
+    "articles":[
+      "302.126.75"
+    ],
     "collection": [
       "kitchen"
     ],
     "colors": [
       {
         "article": "302.126.75",
-        "name": "Assorted colours",
+        "color": "Assorted colours",
         "price": 4.99,
         "images": [
           "https://www.ikea.com/fi/en/images/products/tanum-rug-flatwoven-assorted-colours__0949362_pe799670_s5.jpg?f=m",
@@ -608,19 +702,24 @@
     }
   },
   {
+    "id": "0017",
     "title": "SKOGSTA",
     "subtitle": "Dining table",
     "size": "235x100 cm",
     "description": "Every table is unique, with varying grain pattern and natural colour shifts that are part of the charm of wood.",
-    "type": "table",
+    "category": "table",
     "rating": 50,
+    "basePrice": 549,
+    "articles": [
+      "704.192.64"
+    ],
     "collection": [
       "kitchen"
     ],
     "colors": [
       {
         "article": "704.192.64",
-        "name": "Acacia",
+        "color": "Acacia",
         "price": 549,
         "images": [
           "https://www.ikea.com/fi/en/images/products/skogsta-dining-table-acacia__0546603_pe656255_s5.jpg?f=m",
@@ -638,18 +737,24 @@
     }
   },
   {
+    "id": "0018",
     "title": "SKOGSTA",
     "subtitle": "Chair",
     "description": "Clear-lacquered solid acacia wood chair with arched backrest and characteristic spindles – a classic look that ages beautifully and will keep its appeal in your home over many years.",
-    "type": "chair",
+    "category": "chair",
     "rating": 50,
+    "basePrice": 85,
+    "articles": [
+      "705.448.66",
+      "505.448.67"
+    ],
     "collection": [
       "kitchen"
     ],
     "colors": [
       {
         "article": "705.448.66",
-        "name": "Acacia",
+        "color": "Acacia",
         "price": 85,
         "images": [
           "https://www.ikea.com/fi/en/images/products/skogsta-chair-acacia__1343430_pe949583_s5.jpg?f=m",
@@ -660,7 +765,7 @@
       },
       {
         "article": "505.448.67",
-        "name": "Black",
+        "color": "Black",
         "price": 75,
         "images": [
           "https://www.ikea.com/fi/en/images/products/skogsta-chair-black__1243349_pe920580_s5.jpg?f=m",
@@ -677,19 +782,24 @@
     }
   },
   {
+    "id": "0019",
     "title": "RÖNNINGE",
     "subtitle": "Extendable table",
     "size": "118/173x78 cm",
     "description": "A 4-seat table that easily extends to welcome 6. The light Scandinavian expression enhanced by pale wood creates a perfect setting for everyday activities, casual meals and also more festive occasions.",
-    "type": "table",
+    "category": "table",
     "rating": 0,
+    "basePrice": 229,
+    "articles": [
+      "305.074.65"
+    ],
     "collection": [
       "kitchen"
     ],
     "colors": [
       {
         "article": "305.074.65",
-        "name": "Birch",
+        "color": "Birch",
         "price": 229,
         "images": [
           "https://www.ikea.com/fi/en/images/products/roenninge-extendable-table-birch__1016271_pe830286_s5.jpg?f=m",
@@ -707,18 +817,24 @@
     }
   },
   {
+    "id": "0020",
     "title": "RÖNNINGE",
     "subtitle": "Chair",
     "description": "The robust construction is softened by the visible grains of the wood, giving the chair a warm and homey feeling. The straightforward design, rooted in chairs of the 50’s and 60’s, fits almost anywhere.",
-    "type": "chair",
+    "category": "chair",
     "rating": 50,
+    "basePrice": 99,
+    "articles": [
+      "104.225.04",
+      "104.308.63"
+    ],
     "collection": [
       "kitchen"
     ],
     "colors": [
       {
         "article": "104.225.04",
-        "name": "Birch",
+        "color": "Birch",
         "price": 99,
         "images": [
           "https://www.ikea.com/fi/en/images/products/roenninge-chair-birch__0642047_pe700849_s5.jpg?f=m",
@@ -728,7 +844,7 @@
       },
       {
         "article": "104.308.63",
-        "name": "Black",
+        "color": "Black",
         "price": 99,
         "images": [
           "https://www.ikea.com/fi/en/images/products/roenninge-chair-black__0642096_pe700892_s5.jpg?f=m",
@@ -746,12 +862,17 @@
     }
   },
   {
+    "id": "0021",
     "title": "LOHALS",
     "subtitle": "Rug, flatwoven",
     "size": "200x300 cm",
     "description": "Crafted with natural jute in neutral tones that bring a sense of calm to any space. This durable rug is especially practical in a dining area since it is flatwoven and easy to vacuum.",
-    "type": "rug",
+    "category": "rug",
     "rating": 45,
+    "basePrice": 129,
+    "articles": [
+      "002.773.95"
+    ],
     "collection": [
       "kitchen",
       "living room"
@@ -759,7 +880,7 @@
     "colors": [
       {
         "article": "002.773.95",
-        "name": "Natural",
+        "color": "Natural",
         "price": 129,
         "images": [
           "https://www.ikea.com/fi/en/images/products/lohals-rug-flatwoven-natural__0280230_pe419175_s5.jpg?f=m",
@@ -775,19 +896,24 @@
     }
   },
   {
+    "id": "0022",
     "title": "MÖRBYLÅNGA",
     "subtitle": "Table",
     "size": "140x85 cm",
     "description": "The oak top layer enhances the plank feeling and details like the floating table top and dovetail joints give the table a crafted look. A table full of character and plenty of room for family and friends.",
-    "type": "table",
+    "category": "table",
     "rating": 50,
+    "basePrice": 599,
+    "articles": [
+      "503.862.45"
+    ],
     "collection": [
       "kitchen"
     ],
     "colors": [
       {
         "article": "503.862.45",
-        "name": "Oak veneer brown stained",
+        "color": "Oak veneer brown stained",
         "price": 599,
         "images": [
           "https://www.ikea.com/fi/en/images/products/moerbylanga-table-oak-veneer-brown-stained__0737108_pe740890_s5.jpg?f=m",
@@ -805,12 +931,17 @@
     }
   },
   {
+    "id": "0023",
     "title": "HEKTAR",
     "subtitle": "Pendant lamp",
     "size": "22 cm",
     "description": "The simple, oversized metal shape is inspired by old lamps from places like factories and theatres. Used together, HEKTAR lamps support different activities and create a unified, rustic look in the room.",
-    "type": "lamp",
+    "category": "lamp",
     "rating": 40,
+    "basePrice": 29,
+    "articles": [
+      "803.903.59"
+    ],
     "collection": [
       "kitchen",
       "electronics"
@@ -818,7 +949,7 @@
     "colors": [
       {
         "article": "803.903.59",
-        "name": "Dark grey",
+        "color": "Dark grey",
         "price": 29,
         "images": [
           "https://www.ikea.com/fi/en/images/products/hektar-pendant-lamp-dark-grey__0613033_pe686124_s5.jpg?f=m",
@@ -834,12 +965,17 @@
     }
   },
   {
+    "id": "0024",
     "title": "PILSKOTT",
     "subtitle": "LED pendant lamp",
     "size": "97 cm",
     "description": "PILSKOTT pendant lamp has a modern graphic shape and a bended LED strip that creates dynamic light effects. Complete with a wireless dimmer to dim the lamp.",
-    "type": "lamp",
+    "category": "lamp",
     "rating": 40,
+    "basePrice": 99,
+    "articles": [
+      "304.778.78"
+    ],
     "collection": [
       "kitchen",
       "electronics"
@@ -847,7 +983,7 @@
     "colors": [
       {
         "article": "304.778.78",
-        "name": "Smart black",
+        "color": "Smart black",
         "price": 99,
         "images": [
           "https://www.ikea.com/fi/en/images/products/pilskott-led-pendant-lamp-smart-black__1077625_pe856954_s5.jpg?f=m",

@@ -11,7 +11,7 @@ const imageUrls: string[] = [
   "https://www.ikea.com/ext/ingkadam/m/2e6c72167c491f8d/original/PH190441.jpg?f=xs",
 ];
 
-const Gallery = () => {
+export const Gallery = () => {
   return (
     <div className={styles.gallery}>
       {imageUrls.map((value, index) => (
@@ -22,5 +22,3 @@ const Gallery = () => {
     </div>
   );
 };
-
-export default Gallery;
