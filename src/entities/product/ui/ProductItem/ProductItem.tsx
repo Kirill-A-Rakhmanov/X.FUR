@@ -1,13 +1,10 @@
 import React from "react";
 
-import AddToCartIcon from "@/assets/icons/add-to-cart.svg";
-import FavoriteIcon from "@/assets/icons/favorite.svg";
-
 import styles from "./ProductItem.module.scss";
 import { tItemCard } from "../../model/types";
 import { AddToCart, AddToFavorite } from "@/shared/shared";
 
-export const ProductItem = (props: tItemCard) => {
+export const ProductItem = React.memo((props: tItemCard) => {
   const { id, title, subtitle, price, image, article } = props;
 
   return (
@@ -26,4 +23,4 @@ export const ProductItem = (props: tItemCard) => {
       </div>
     </div>
   );
-};
+});
