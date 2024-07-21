@@ -1,20 +1,38 @@
 import React from "react";
 
 import styles from "./ItemsRow.module.scss";
-import { ScrollButton } from "@/shared/shared";
 import { getItems, ProductItem, queryParams, tItem } from "@/entities/entities";
+import { ScrollLeft, ScrollRight } from "@/features/features";
 
 export const ItemsRow = () => {
   const [trendingItems, setTrendingItems] = React.useState<tItem[]>([]);
-  const timerDebounceRef = React.useRef();
-
   const itemsContainerRef = React.useRef(null);
-  const [scrollPosition, setScrollPosition] = React.useState(0);
-  const [scrollWidth, setScrollWidth] = React.useState(0);
-  const [scrollStep, setScrollStep] = React.useState(0);
+  const scrollPosition = React.useRef<number>(0);
+  const scrollStep = React.useRef<number>(0);
+  const [scrollOnRight, setScrollOnRight] = React.useState(false);
+  const [scrollOnLeft, setScrollOnLeft] = React.useState(false);
 
   function handleScroll() {
-    setScrollPosition(itemsContainerRef.current.scrollLeft);
+    scrollPosition.current = itemsContainerRef.current.scrollLeft;
+    if (itemsContainerRef.current.scrollLeft === 0) {
+      setScrollOnLeft(false);
+      setScrollOnRight(true);
+    } else if (
+      itemsContainerRef.current.scrollLeft ===
+      itemsContainerRef.current.scrollWidth -
+        itemsContainerRef.current.offsetWidth
+    ) {
+      setScrollOnLeft(true);
+      setScrollOnRight(false);
+    } else {
+      setScrollOnLeft(true);
+      setScrollOnRight(true);
+    }
+  }
+
+  function handleButtonScroll(scrollAmount: number) {
+    itemsContainerRef.current.scrollLeft =
+      scrollPosition.current + scrollAmount;
   }
 
   // Получение товаров с сервера. Пока что это стейт, но потом это уедет в редакс
@@ -29,26 +47,22 @@ export const ItemsRow = () => {
     });
   }, []);
 
-  //Установка шага скролла в зависимости от ширины контейнера
+  // Вычисление шага скролла в зависимости от ширины контейнера
   React.useEffect(() => {
-    if (itemsContainerRef) {
-      setScrollWidth(
-        itemsContainerRef.current.scrollWidth -
-          itemsContainerRef.current.offsetWidth
+    function MinusTenPercent(value: number) {
+      return Math.trunc(value * 0.9);
+    }
+    function calcScrollStep() {
+      scrollStep.current = MinusTenPercent(
+        itemsContainerRef.current.offsetWidth
       );
-      setScrollStep(itemsContainerRef.current.offsetWidth - 100);
-    }
-  }, [trendingItems]);
-
-  React.useEffect(() => {
-    function handleResize() {
-      setScrollStep(itemsContainerRef.current.offsetWidth - 100);
     }
 
-    window.addEventListener("resize", handleResize);
+    calcScrollStep();
 
+    window.addEventListener("resize", calcScrollStep);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", calcScrollStep);
     };
   }, []);
 
@@ -71,16 +85,15 @@ export const ItemsRow = () => {
           />
         ))}
       </div>
-
-      <div>{scrollPosition}</div>
-      <div>{scrollWidth}</div>
-      <div>{scrollStep}</div>
-
       <div className={styles.scrollLeft}>
-        <ScrollButton direction={"left"} />
+        {scrollOnLeft && (
+          <ScrollLeft onClick={() => handleButtonScroll(-scrollStep.current)} />
+        )}
       </div>
       <div className={styles.scrollRight}>
-        <ScrollButton direction={"right"} />
+        {scrollOnRight && (
+          <ScrollRight onClick={() => handleButtonScroll(scrollStep.current)} />
+        )}
       </div>
     </div>
   );

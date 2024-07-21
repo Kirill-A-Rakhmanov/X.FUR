@@ -1,7 +1,4 @@
-import axios from "axios";
-import qs from "query-string";
-
-import { API_URL, mockApi } from "../api";
+import { mockApi } from "../api";
 import { queryParams, tItem } from "./types";
 
 export const getItems = async (params?: queryParams) => {
@@ -18,7 +15,7 @@ export const getItems = async (params?: queryParams) => {
 
 export const getItemById = async (id: string) => {
   const data = await mockApi
-    .get(`/products/${id}`)
+    .get<tItem>(`/products/${id}`)
     .then((response) => {
       return response.data;
     })

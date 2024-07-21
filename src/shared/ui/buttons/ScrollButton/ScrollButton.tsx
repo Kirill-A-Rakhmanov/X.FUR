@@ -6,11 +6,12 @@ import { tDirection } from "./types";
 
 type Props = {
   direction: tDirection;
+  onClick?: React.MouseEventHandler;
 };
 
-export const ScrollButton = ({ direction }: Props) => {
+export const ScrollButton = ({ direction, onClick }: Props) => {
   return (
-    <div className={styles.wrapper}>
+    <div onClick={onClick} className={styles.wrapper}>
       <ArrowIcon className={[styles.icon, styles[direction]].join(" ")} />
     </div>
   );
