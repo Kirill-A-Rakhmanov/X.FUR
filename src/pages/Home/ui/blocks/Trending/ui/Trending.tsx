@@ -1,11 +1,7 @@
 import React from "react";
 
 import styles from "./Trending.module.scss";
-
-import { getItems } from "@/entities/product/model/services";
-import { queryParams, tItem } from "@/entities/product/model/types";
-import { ScrollButton } from "@/shared/shared";
-import { ProductItem } from "@/entities/entities";
+import { ItemsRow } from "@/widgets/widgets";
 
 export const Trending = () => {
   // const [scrollPosition, setScrollPosition] = React.useState(0);
@@ -65,6 +61,7 @@ export const Trending = () => {
       >
         <div className={styles.content}>
           <h2 className={styles.header}>Trending now</h2>
+          <ItemsRow />
           {/* <div className={styles.itemsWrapper}>
             <div
               ref={itemsContainerRef}

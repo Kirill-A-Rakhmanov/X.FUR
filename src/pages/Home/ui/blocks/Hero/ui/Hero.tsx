@@ -64,6 +64,7 @@ export const Hero = () => {
           /> */}
           {templates.map((obj, index) => (
             <Template
+              key={index}
               img={obj.img}
               alt={obj.alt}
               header={obj.header}
