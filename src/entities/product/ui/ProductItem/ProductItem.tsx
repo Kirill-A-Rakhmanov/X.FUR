@@ -1,24 +1,38 @@
 import React from "react";
 
 import styles from "./ProductItem.module.scss";
-import { tItemCard } from "../../model/types";
-import { AddToCart, AddToFavorite } from "@/shared/shared";
 
-export const ProductItem = React.memo((props: tItemCard) => {
-  const { id, title, subtitle, price, image, article } = props;
+type tProps = {
+  title: string;
+  subtitle: string;
+  price: number;
+  image: string;
+  actionAddToCart: React.ReactNode;
+  actionAddToFavorite: React.ReactNode;
+};
+
+export const ProductItem = React.memo((props: tProps) => {
+  const {
+    title,
+    subtitle,
+    price,
+    image,
+    actionAddToCart,
+    actionAddToFavorite,
+  } = props;
 
   return (
     <div className={styles.item}>
       <div className={styles.image}>
-        <img src={image} alt="white sofa" />
+        <img src={image} alt={title} />
       </div>
       <div className={styles.title}>{title}</div>
       <div className={styles.subtitle}>{subtitle}</div>
       <div className={styles.info}>
         <div className={styles.price}>{price} €</div>
         <div className={styles.actions}>
-          <AddToCart />
-          <AddToFavorite />
+          {actionAddToCart}
+          {actionAddToFavorite}
         </div>
       </div>
     </div>

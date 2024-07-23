@@ -1,9 +1,11 @@
 import { mockApi } from "../api";
 import { queryParams, tItem } from "./types";
 
+const PRODUCTS = "/products";
+
 export const getItems = async (params?: queryParams) => {
   const data = await mockApi
-    .get<tItem[]>("/products", { params })
+    .get<tItem[]>(PRODUCTS, { params })
     .then((response) => {
       return response.data;
     })
@@ -15,7 +17,7 @@ export const getItems = async (params?: queryParams) => {
 
 export const getItemById = async (id: string) => {
   const data = await mockApi
-    .get<tItem>(`/products/${id}`)
+    .get<tItem>(`${PRODUCTS}/${id}`)
     .then((response) => {
       return response.data;
     })
@@ -27,7 +29,7 @@ export const getItemById = async (id: string) => {
 
 export const getItemByArticle = async (articles: string) => {
   const data = await mockApi
-    .get("/products", { params: { articles } })
+    .get<tItem[]>(PRODUCTS, { params: { articles } })
     .then((response) => {
       return response.data[0];
     })

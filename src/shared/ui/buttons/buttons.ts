@@ -1,3 +1,3 @@
-export * from "./AddToCart/AddToCart";
-export * from "./AddToFavorite/AddToFavorite";
+export * from "./AddToCartButton/AddToCartButton";
+export * from "./AddToFavoriteButton/AddToFavoriteButton";
 export * from "./ScrollButton/ScrollButton";

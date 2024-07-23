@@ -42,6 +42,7 @@ export type tItemCard = {
   id: string;
   title: string;
   subtitle: string;
+  color: string;
   price: number;
   article: string;
   image: string;

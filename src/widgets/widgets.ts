@@ -1,3 +1,5 @@
 export * from "./Gallery/gallery";
 export * from "./Сategories/categories";
-export * from "./ItemsRow/itemsRow";
+export * from "./ScrollableArea/scrollableArea";
+export * from "./ProductRow/productRow";
+export * from "./ProductCard/productCard";

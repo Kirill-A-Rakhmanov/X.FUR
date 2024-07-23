@@ -5,47 +5,12 @@
 }
 .container {
 }
-.content {
-}
+
 .header {
   font-size: 28px;
   font-weight: 600;
 }
-// .itemsWrapper {
-//   position: relative;
-//   &:hover {
-//     .scrollLeft,
-//     .scrollRight {
-//       visibility: visible;
-//     }
-//   }
-// }
 
-// .items {
-//   margin: 40px 0px 0px 0px;
-//   display: flex;
-//   gap: 20px;
-//   overflow-x: scroll;
-//   scrollbar-width: none;
-//   scroll-behavior: smooth;
-
-//   -ms-overflow-style: none;
-//   &::-webkit-scrollbar {
-//     display: none;
-//   }
-// }
-// .scrollRight,
-// .scrollLeft {
-//   visibility: hidden;
-//   position: absolute;
-//   top: 50%;
-// }
-
-// .scrollRight {
-//   right: 0;
-//   transform: translate(50%, -50%);
-// }
-// .scrollLeft {
-//   left: 0;
-//   transform: translate(-50%, -50%);
-// }
+.content {
+  margin: 40px 0px 0px 0px;
+}
