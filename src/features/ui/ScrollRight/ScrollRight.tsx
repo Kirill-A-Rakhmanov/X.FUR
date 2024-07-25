@@ -2,7 +2,7 @@ import { ScrollButton } from "@/shared/shared";
 import React from "react";
 
 type tProps = {
-  onClick?: any;
+  onClick?: React.MouseEventHandler;
 };
 
 export const ScrollRight = ({ onClick }: tProps) => {

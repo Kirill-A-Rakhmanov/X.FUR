@@ -50,6 +50,12 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
     },
   };
 
+  const cssLoader = {
+    test: /\.css$/,
+    use: ["style-loader", "css-loader"],
+    exclude: /\.module\.css$/,
+  };
+
   const scssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -86,5 +92,12 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
 
   const babelLoader = buildBabelLoader(options);
 
-  return [assetLoader, scssLoader, babelLoader, svgrLoader, fontLoader];
+  return [
+    assetLoader,
+    cssLoader,
+    scssLoader,
+    babelLoader,
+    svgrLoader,
+    fontLoader,
+  ];
 }

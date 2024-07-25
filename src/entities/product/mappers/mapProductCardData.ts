@@ -6,6 +6,7 @@ export const mapProductCardData = (data: tItem) => {
     id: data.id,
     title: data.title,
     subtitle: data.subtitle,
+    size: data.size,
     price: data.colors[0].price,
     article: data.articles[0],
     color: data.colors[0].color,

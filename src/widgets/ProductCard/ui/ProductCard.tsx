@@ -2,18 +2,19 @@ import { ProductItem, tItemCard } from "@/entities/entities";
 import { AddToCart, AddToFavorite } from "@/features/features";
 import React from "react";
 
-export const ProductCard = React.memo(
-  ({ id, title, subtitle, price, image, color, article }: tItemCard) => {
-    return (
-      <ProductItem
-        key={id}
-        title={title}
-        subtitle={subtitle}
-        price={price}
-        image={image}
-        actionAddToCart={<AddToCart />}
-        actionAddToFavorite={<AddToFavorite />}
-      />
-    );
-  }
-);
+type tProps = {
+  itemData: tItemCard;
+};
+
+export const ProductCard = React.memo(({ itemData }: tProps) => {
+  return (
+    <ProductItem
+      title={itemData.title}
+      subtitle={itemData.subtitle}
+      price={itemData.price}
+      image={itemData.image}
+      actionAddToCart={<AddToCart />}
+      actionAddToFavorite={<AddToFavorite item={itemData} />}
+    />
+  );
+});

@@ -1,5 +1,5 @@
 import { mockApi } from "../api";
-import { queryParams, tItem } from "./types";
+import { queryParams, tItem, tItemCard } from "./types";
 
 const PRODUCTS = "/products";
 
@@ -37,4 +37,16 @@ export const getItemByArticle = async (articles: string) => {
       return {};
     });
   return data;
+};
+
+export const calcFavoriteTotalQuantity = (items: tItemCard[]) => {
+  return items.reduce((sum: number, obj: tItemCard) => {
+    return obj.quantity + sum;
+  }, 0);
+};
+
+export const calcFavoriteTotalPrice = (items: tItemCard[]) => {
+  return items.reduce((sum: number, obj: tItemCard) => {
+    return obj.price * obj.quantity + sum;
+  }, 0);
 };

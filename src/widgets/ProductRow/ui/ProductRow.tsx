@@ -1,14 +1,15 @@
 import React from "react";
-import { useSelector } from "react-redux";
 
 import styles from "./ProductRow.module.scss";
 import {
   fetchTrendingProducts,
+  ProductItemSkeleton,
   queryParams,
-  trendingItems,
-  useAppDispatch,
+  selectTrendingItems,
+  selectTrendingStatus,
 } from "@/entities/entities";
 import { ProductCard } from "@/widgets/widgets";
+import { useAppDispatch, useAppSelector } from "@/app/store/hooks";
 
 type tProps = {
   params: queryParams;
@@ -16,7 +17,8 @@ type tProps = {
 
 export const ProductRow = React.memo(({ params }: tProps) => {
   const dispatch = useAppDispatch();
-  const items = useSelector(trendingItems);
+  const items = useAppSelector(selectTrendingItems);
+  const status = useAppSelector(selectTrendingStatus);
 
   React.useEffect(() => {
     dispatch(fetchTrendingProducts(params));
@@ -24,16 +26,9 @@ export const ProductRow = React.memo(({ params }: tProps) => {
 
   return (
     <>
+      {status !== "success" && <ProductItemSkeleton cards={7} />}
       {items.map((obj) => (
-        <ProductCard
-          id={obj.id}
-          title={obj.title}
-          subtitle={obj.subtitle}
-          price={obj.price}
-          image={obj.image}
-          color={obj.color}
-          article={obj.article}
-        />
+        <ProductCard key={obj.article} itemData={obj} />
       ))}
     </>
   );

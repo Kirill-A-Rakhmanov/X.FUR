@@ -43,7 +43,14 @@ export type tItemCard = {
   title: string;
   subtitle: string;
   color: string;
+  size?: string;
   price: number;
   article: string;
   image: string;
+  quantity?: number;
+};
+
+export type tSetQuantity = {
+  article: string;
+  quantity: number;
 };

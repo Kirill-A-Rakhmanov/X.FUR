@@ -52,6 +52,7 @@
 .subtitle {
   font-size: 16px;
   font-weight: 400;
+  align-self: start;
   color: #484848;
   @media (max-width: 769px) {
     font-size: 14px;
@@ -83,4 +84,36 @@
 .actions {
   display: flex;
   gap: 10px;
+  .action {
+    width: 40px;
+    height: 40px;
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+.containerSkeleton {
+  display: block;
+  line-height: 1;
+}
+.titleSkeleton {
+  font-size: 16px;
+  font-weight: 600;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media (max-width: 540px) {
+    font-size: 12px;
+  }
+}
+.subtitleSkeleton {
+  font-size: 16px;
+  font-weight: 400;
+  @media (max-width: 769px) {
+    font-size: 14px;
+  }
+  @media (max-width: 540px) {
+    font-size: 12px;
+  }
 }

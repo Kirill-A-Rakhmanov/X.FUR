@@ -1,4 +1,4 @@
-import { Home, Layout } from "@/pages/pages";
+import { Favorite, Home, Layout } from "@/pages/pages";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 const routes: RouteObject[] = [
@@ -9,6 +9,10 @@ const routes: RouteObject[] = [
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path: "favorite",
+        element: <Favorite />,
       },
     ],
   },
