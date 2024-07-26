@@ -1,6 +1,18 @@
+import { useAppDispatch, useAppSelector } from "@/app/store/hooks";
+import { addToCart, selectCartItems, tItemCard } from "@/entities/entities";
 import { AddToCartButton } from "@/shared/shared";
 import React from "react";
 
-export const AddToCart = () => {
-  return <AddToCartButton />;
+type tProps = {
+  item: tItemCard;
+};
+
+export const AddToCart = ({ item }: tProps) => {
+  const dispatch = useAppDispatch();
+
+  const handleClick = (item: tItemCard) => {
+    dispatch(addToCart(item));
+  };
+
+  return <AddToCartButton onClick={() => handleClick(item)} />;
 };

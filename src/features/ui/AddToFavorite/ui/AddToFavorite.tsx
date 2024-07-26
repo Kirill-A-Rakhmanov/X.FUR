@@ -20,7 +20,7 @@ export const AddToFavorite = ({ item }: tProps) => {
 
   const handleClick = (item: tItemCard) => {
     if (findItem) {
-      dispatch(removeFromFavorite(item));
+      dispatch(removeFromFavorite(item.article));
     } else {
       dispatch(addToFavorite(item));
     }

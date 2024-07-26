@@ -4,3 +4,5 @@ export * from "./AddToCart/addToCart";
 export * from "./AddToFavorite/addToFavorite";
 export * from "./FavoriteIndicator/favoriteIndicator";
 export * from "./CartIndicator/cartIndicator";
+export * from "./RemoveFromCart/removeFromCart";
+export * from "./RemoveFromFavorite/removeFromFavorite";

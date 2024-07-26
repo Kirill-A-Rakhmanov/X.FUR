@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "@/app/store/store";
 import { tItemCard, tSetQuantity } from "../types";
-import { calcFavoriteTotalPrice, calcFavoriteTotalQuantity } from "../services";
+import { calcTotalPrice, calcTotalQuantity } from "../services";
 
 interface tTrendingState {
   items: tItemCard[];
@@ -29,15 +29,13 @@ export const favoriteSlice = createSlice({
       } else {
         state.items.push({ ...action.payload, quantity: 1 });
       }
-      state.totalQuantity = calcFavoriteTotalQuantity(state.items);
-      state.totalPrice = calcFavoriteTotalPrice(state.items);
+      state.totalQuantity = calcTotalQuantity(state.items);
+      state.totalPrice = calcTotalPrice(state.items);
     },
-    removeFromFavorite(state, action: PayloadAction<tItemCard>) {
-      state.items = state.items.filter(
-        (obj) => obj.article !== action.payload.article
-      );
-      state.totalQuantity = calcFavoriteTotalQuantity(state.items);
-      state.totalPrice = calcFavoriteTotalPrice(state.items);
+    removeFromFavorite(state, action: PayloadAction<string>) {
+      state.items = state.items.filter((obj) => obj.article !== action.payload);
+      state.totalQuantity = calcTotalQuantity(state.items);
+      state.totalPrice = calcTotalPrice(state.items);
     },
     incrementFavoriteQuantity(state, action: PayloadAction<string>) {
       const findItem = state.items.find(
@@ -46,8 +44,8 @@ export const favoriteSlice = createSlice({
       if (findItem) {
         findItem.quantity++;
       }
-      state.totalQuantity = calcFavoriteTotalQuantity(state.items);
-      state.totalPrice = calcFavoriteTotalPrice(state.items);
+      state.totalQuantity = calcTotalQuantity(state.items);
+      state.totalPrice = calcTotalPrice(state.items);
     },
     decrementFavoriteQuantity(state, action: PayloadAction<string>) {
       const findItem = state.items.find(
@@ -56,8 +54,8 @@ export const favoriteSlice = createSlice({
       if (findItem) {
         findItem.quantity--;
       }
-      state.totalQuantity = calcFavoriteTotalQuantity(state.items);
-      state.totalPrice = calcFavoriteTotalPrice(state.items);
+      state.totalQuantity = calcTotalQuantity(state.items);
+      state.totalPrice = calcTotalPrice(state.items);
     },
     setFavoriteQuantity(state, action: PayloadAction<tSetQuantity>) {
       const findItem = state.items.find(
@@ -66,8 +64,8 @@ export const favoriteSlice = createSlice({
       if (findItem) {
         findItem.quantity = action.payload.quantity;
       }
-      state.totalQuantity = calcFavoriteTotalQuantity(state.items);
-      state.totalPrice = calcFavoriteTotalPrice(state.items);
+      state.totalQuantity = calcTotalQuantity(state.items);
+      state.totalPrice = calcTotalPrice(state.items);
     },
   },
 });
@@ -83,5 +81,7 @@ export const {
 export const selectFavoriteItems = (state: RootState) => state.favorite.items;
 export const selectFavoriteQuantity = (state: RootState) =>
   state.favorite.totalQuantity;
+export const selectFavoritePrice = (state: RootState) =>
+  state.favorite.totalPrice;
 
 export default favoriteSlice.reducer;

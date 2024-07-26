@@ -39,13 +39,13 @@ export const getItemByArticle = async (articles: string) => {
   return data;
 };
 
-export const calcFavoriteTotalQuantity = (items: tItemCard[]) => {
+export const calcTotalQuantity = (items: tItemCard[]) => {
   return items.reduce((sum: number, obj: tItemCard) => {
     return obj.quantity + sum;
   }, 0);
 };
 
-export const calcFavoriteTotalPrice = (items: tItemCard[]) => {
+export const calcTotalPrice = (items: tItemCard[]) => {
   return items.reduce((sum: number, obj: tItemCard) => {
     return obj.price * obj.quantity + sum;
   }, 0);

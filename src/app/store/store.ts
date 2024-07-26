@@ -1,10 +1,11 @@
-import { favoriteSlice, trendingSlice } from "@/entities/entities";
+import { cartSlice, favoriteSlice, trendingSlice } from "@/entities/entities";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
   reducer: {
     trending: trendingSlice.reducer,
     favorite: favoriteSlice.reducer,
+    cart: cartSlice.reducer,
   },
 });
 

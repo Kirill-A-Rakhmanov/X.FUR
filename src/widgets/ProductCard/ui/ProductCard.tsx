@@ -1,5 +1,6 @@
 import { ProductItem, tItemCard } from "@/entities/entities";
 import { AddToCart, AddToFavorite } from "@/features/features";
+import { SetFavoriteQuantity } from "@/widgets/widgets";
 import React from "react";
 
 type tProps = {
@@ -13,7 +14,8 @@ export const ProductCard = React.memo(({ itemData }: tProps) => {
       subtitle={itemData.subtitle}
       price={itemData.price}
       image={itemData.image}
-      actionAddToCart={<AddToCart />}
+      article={itemData.article}
+      actionAddToCart={<AddToCart item={itemData} />}
       actionAddToFavorite={<AddToFavorite item={itemData} />}
     />
   );

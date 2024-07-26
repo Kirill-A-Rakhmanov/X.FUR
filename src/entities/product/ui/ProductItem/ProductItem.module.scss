@@ -2,19 +2,19 @@
 
 .item {
   cursor: pointer;
-  flex: 0 0 280px;
+  // flex: 0 0 280px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   &:hover .title::after {
     width: 100%;
   }
-  @media (max-width: 768px) {
-    flex: 0 0 200px;
-  }
-  @media (max-width: 540px) {
-    flex: 0 0 120px;
-  }
+  // @media (max-width: 768px) {
+  //   flex: 0 0 200px;
+  // }
+  // @media (max-width: 540px) {
+  //   flex: 0 0 120px;
+  // }
 }
 .image {
   position: relative;

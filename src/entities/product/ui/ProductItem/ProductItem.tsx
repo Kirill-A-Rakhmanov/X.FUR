@@ -1,12 +1,14 @@
 import React from "react";
 
 import styles from "./ProductItem.module.scss";
+import { SetFavoriteQuantity } from "@/widgets/widgets";
 
 type tProps = {
   title: string;
   subtitle: string;
   price: number;
   image: string;
+  article: string;
   actionAddToCart: React.ReactNode;
   actionAddToFavorite: React.ReactNode;
 };
@@ -17,6 +19,7 @@ export const ProductItem = React.memo((props: tProps) => {
     subtitle,
     price,
     image,
+    article,
     actionAddToCart,
     actionAddToFavorite,
   } = props;
