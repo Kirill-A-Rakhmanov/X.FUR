@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from "@/app/store/hooks";
-import { addToCart, selectCartItems, tItemCard } from "@/entities/entities";
+import { useAppDispatch } from "@/app/store/hooks";
+import { addToCart, tItemCard } from "@/entities/entities";
 import { AddToCartButton } from "@/shared/shared";
 import React from "react";
 

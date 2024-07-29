@@ -1,37 +1,31 @@
 import React from "react";
 
 import styles from "./SetQuantity.module.scss";
-import { MinusButton, PlusButton } from "@/shared/shared";
+import {
+  ChangeFavoriteQuantity,
+  DecreaseFavoriteQuantity,
+  IncreaseFavoriteQuantity,
+} from "@/features/features";
 import { useAppDispatch } from "@/app/store/hooks";
+import { removeFromFavorite, tSetQuantity } from "@/entities/entities";
 
-type tProps = {
-  article: string;
-  quantity: number;
-};
-
-export const SetFavoriteQuantity = ({ article, quantity }: tProps) => {
-  const inputRef = React.useRef(null);
+export const SetFavoriteQuantity = ({ article, quantity }: tSetQuantity) => {
   const dispatch = useAppDispatch();
 
-  const handlePlusClick = () => {};
-  const handleMinusClick = () => {};
-  const handleChange = () => {};
+  if (quantity < 1) {
+    dispatch(removeFromFavorite(article));
+  }
 
   return (
     <div className={styles.wrapper}>
-      <div>
-        <MinusButton onClick={() => handleMinusClick()} />
+      <div className={styles.button}>
+        <DecreaseFavoriteQuantity article={article} />
       </div>
-      <input
-        ref={inputRef}
-        onChange={() => handleChange()}
-        className={styles.input}
-        type="number"
-        min="1"
-        max="999"
-      />
-      <div>
-        <PlusButton onClick={() => handlePlusClick()} />
+      <div className={styles.input}>
+        <ChangeFavoriteQuantity article={article} quantity={quantity} />
+      </div>
+      <div className={styles.button}>
+        <IncreaseFavoriteQuantity quantity={quantity} article={article} />
       </div>
     </div>
   );

@@ -1,0 +1,20 @@
+.items {
+  margin: 100px 0px 0px 0px;
+}
+
+.container {
+}
+
+.content {
+}
+.header {
+  font-size: 28px;
+  font-weight: 600;
+}
+.wrapper {
+  margin: 60px 0px 0px 0px;
+  display: grid;
+  gap: 20px;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+}

@@ -6,3 +6,4 @@ export * from "./FavoriteIndicator/favoriteIndicator";
 export * from "./CartIndicator/cartIndicator";
 export * from "./RemoveFromCart/removeFromCart";
 export * from "./RemoveFromFavorite/removeFromFavorite";
+export * from "./ChangeQuantity/changeQuantity";

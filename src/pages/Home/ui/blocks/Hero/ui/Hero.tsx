@@ -39,29 +39,6 @@ export const Hero = () => {
     <section className={styles.hero}>
       <div className={[styles.container && "", "_container"].join(" ")}>
         <div className={styles.content}>
-          {/* <Template
-            img={livingroomImg}
-            alt={"living room image"}
-            header={"Live Comfortably"}
-            size={"x4"}
-          />
-          <Template
-            img={bedroomImg}
-            alt={"bedroom image"}
-            header={"Bedroom"}
-            size={"x2"}
-          />
-          <Template
-            img={kitchenImg}
-            alt={"kitchen image"}
-            header={"Kitchen"}
-            size={"x1"}
-          />
-          <Template
-            img={electronicsImg}
-            alt={"electronics image"}
-            header={"Electronics"}
-          /> */}
           {templates.map((obj, index) => (
             <Template
               key={index}

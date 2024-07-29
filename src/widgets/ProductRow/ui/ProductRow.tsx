@@ -1,6 +1,5 @@
 import React from "react";
 
-import styles from "./ProductRow.module.scss";
 import {
   fetchTrendingProducts,
   ProductItemSkeleton,

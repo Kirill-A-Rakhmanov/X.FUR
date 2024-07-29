@@ -1,8 +1,5 @@
 import React from "react";
-import { Hero } from "./blocks/Hero/hero";
-import { Trending } from "./blocks/Trending/trending";
-import { Creative } from "./blocks/Creative/creative";
-import { Inspiration } from "./blocks/Inpiration/inspiration";
+import { Creative, Hero, Inspiration, Trending } from "./blocks";
 
 export const Home = () => {
   return (
