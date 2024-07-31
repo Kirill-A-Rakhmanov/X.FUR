@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "./Creative.module.scss";
 import sofaImg from "@/assets/img/02 creative/sofa.jpg";
+import { LinkButton } from "@/shared/shared";
 
 export const Creative = () => {
   return (
@@ -20,7 +21,8 @@ export const Creative = () => {
                 X.FUR products are made with care to fit perfectly in your
                 interior
               </div>
-              <button className={styles.button}>SHOP NOW</button>
+              <LinkButton link={"/products/"} text={"SHOP NOW"} />
+              {/* todo: поставить в ссылку артикул */}
             </div>
           </div>
           <div className={styles.image}>

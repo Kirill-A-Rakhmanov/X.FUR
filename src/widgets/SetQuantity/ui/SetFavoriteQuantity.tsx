@@ -6,20 +6,13 @@ import {
   DecreaseFavoriteQuantity,
   IncreaseFavoriteQuantity,
 } from "@/features/features";
-import { useAppDispatch } from "@/app/store/hooks";
-import { removeFromFavorite, tSetQuantity } from "@/entities/entities";
+import { tSetQuantity } from "@/entities/entities";
 
 export const SetFavoriteQuantity = ({ article, quantity }: tSetQuantity) => {
-  const dispatch = useAppDispatch();
-
-  if (quantity < 1) {
-    dispatch(removeFromFavorite(article));
-  }
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.button}>
-        <DecreaseFavoriteQuantity article={article} />
+        <DecreaseFavoriteQuantity quantity={quantity} article={article} />
       </div>
       <div className={styles.input}>
         <ChangeFavoriteQuantity article={article} quantity={quantity} />

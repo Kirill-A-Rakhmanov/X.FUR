@@ -1,17 +1,24 @@
 import { MinusButton } from "@/shared/shared";
 import React from "react";
 import { useAppDispatch } from "@/app/store/hooks";
-import { decrementFavoriteQuantity } from "@/entities/entities";
+import {
+  decrementFavoriteQuantity,
+  removeFromFavorite,
+  tSetQuantity,
+} from "@/entities/entities";
 
-type tProps = {
-  article: string;
-};
-
-export const DecreaseFavoriteQuantity = ({ article }: tProps) => {
+export const DecreaseFavoriteQuantity = ({
+  article,
+  quantity,
+}: tSetQuantity) => {
   const dispatch = useAppDispatch();
 
   const handleClick = (article: string) => {
-    dispatch(decrementFavoriteQuantity(article));
+    if (quantity === 1) {
+      dispatch(removeFromFavorite(article));
+    } else {
+      dispatch(decrementFavoriteQuantity(article));
+    }
   };
 
   return <MinusButton onClick={() => handleClick(article)} />;

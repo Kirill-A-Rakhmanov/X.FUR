@@ -28,16 +28,6 @@ export type tMeasurements = {
   depth?: string;
 };
 
-export type queryParams = {
-  sortby?: string;
-  orderby?: string;
-  order?: "asc" | "desc";
-  page?: string;
-  limit?: string;
-  collection?: string;
-  category?: string;
-};
-
 export type tItemCard = {
   id: string;
   title: string;

@@ -1,5 +1,6 @@
+import { queryParams } from "@/entities/entities";
 import { mockApi } from "../api";
-import { queryParams, tItem, tItemCard } from "./types";
+import { tItem, tItemCard } from "./types";
 
 const PRODUCTS = "/products";
 

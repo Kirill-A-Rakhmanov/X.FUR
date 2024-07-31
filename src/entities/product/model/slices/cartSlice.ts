@@ -20,13 +20,25 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart(state, action: PayloadAction<tItemCard>) {
+    addItemToCart(state, action: PayloadAction<tItemCard>) {
       const findItem = state.items.find(
         (obj) => obj.article === action.payload.article
       );
       if (!findItem) {
         state.items.push({ ...action.payload, quantity: 1 });
       }
+      state.totalQuantity = calcTotalQuantity(state.items);
+      state.totalPrice = calcTotalPrice(state.items);
+    },
+    addItemsToCart(state, action: PayloadAction<tItemCard[]>) {
+      action.payload.map((item, index) => {
+        const findItem = state.items.find(
+          (obj) => obj.article === item.article
+        );
+        if (!findItem) {
+          state.items.push({ ...item, quantity: 1 });
+        }
+      });
       state.totalQuantity = calcTotalQuantity(state.items);
       state.totalPrice = calcTotalPrice(state.items);
     },
@@ -69,7 +81,8 @@ export const cartSlice = createSlice({
 });
 
 export const {
-  addToCart,
+  addItemToCart,
+  addItemsToCart,
   removeFromCart,
   incrementCartQuantity,
   decrementCartQuantity,

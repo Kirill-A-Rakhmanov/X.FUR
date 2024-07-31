@@ -1,5 +1,5 @@
 import { useAppDispatch } from "@/app/store/hooks";
-import { addToCart, tItemCard } from "@/entities/entities";
+import { addItemToCart, tItemCard } from "@/entities/entities";
 import { AddToCartButton } from "@/shared/shared";
 import React from "react";
 
@@ -11,7 +11,7 @@ export const AddToCart = ({ item }: tProps) => {
   const dispatch = useAppDispatch();
 
   const handleClick = (item: tItemCard) => {
-    dispatch(addToCart(item));
+    dispatch(addItemToCart(item));
   };
 
   return <AddToCartButton onClick={() => handleClick(item)} />;

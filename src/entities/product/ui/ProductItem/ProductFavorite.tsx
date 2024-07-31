@@ -29,6 +29,7 @@ export const ProductFavorite = React.memo((props: tProps) => {
     actionRemoveFromFavorite,
   } = props;
 
+  //todo: добавиь сюда ссылку на страницу товара через Link и артикул
   return (
     <div className={styles.item}>
       <div className={styles.image}>

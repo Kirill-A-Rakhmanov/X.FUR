@@ -12,7 +12,7 @@ export const SetCartQuantity = ({ article, quantity }: tSetQuantity) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.button}>
-        <DecreaseCartQuantity article={article} />
+        <DecreaseCartQuantity quantity={quantity} article={article} />
       </div>
       <div className={styles.input}>
         <ChangeCartQuantity article={article} quantity={quantity} />

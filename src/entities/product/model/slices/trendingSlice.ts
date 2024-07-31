@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { queryParams, tItemCard } from "../types";
+import { tItemCard } from "../types";
 import { getItems } from "../services";
-import { mapProductCardData } from "@/entities/entities";
+import { mapProductCardData, queryParams } from "@/entities/entities";
 import { RootState } from "@/app/store/store";
 
 interface tTrendingState {

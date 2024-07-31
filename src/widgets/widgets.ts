@@ -4,3 +4,4 @@ export * from "./ScrollableArea/scrollableArea";
 export * from "./ProductRow/productRow";
 export * from "./ProductCard/productCard";
 export * from "./SetQuantity/setQuantity";
+export * from "./Filters/filters";
