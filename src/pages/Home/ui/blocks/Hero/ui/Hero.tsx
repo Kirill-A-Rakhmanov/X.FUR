@@ -11,25 +11,29 @@ import Template from "./Template/Template";
 export const Hero = () => {
   const templates = [
     {
+      collection: "living room",
       img: livingroomImg,
       alt: "living room image",
       header: "Live Comfortably",
       size: "x4",
     },
     {
+      collection: "bedroom",
       img: bedroomImg,
       alt: "bedroom image",
       header: "Bedroom",
       size: "x2",
     },
     {
-      img: livingroomImg,
+      collection: "kitchen",
+      img: kitchenImg,
       alt: "kitchen image",
       header: "Kitchen",
       size: "x1",
     },
     {
-      img: livingroomImg,
+      collection: "electronics",
+      img: electronicsImg,
       alt: "electronics image",
       header: "Electronics",
     },
@@ -42,6 +46,7 @@ export const Hero = () => {
           {templates.map((obj, index) => (
             <Template
               key={index}
+              collection={obj.collection}
               img={obj.img}
               alt={obj.alt}
               header={obj.header}

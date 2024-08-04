@@ -1,3 +1,3 @@
-export * from "./ui/FilterCategory";
-export * from "./ui/FilterCollection";
-export * from "./ui/FilterSortBy";
+export * from "./ui/Filter";
+export * from "./ui/FilterPopup/FilterPopup";
+export * from "./ui/FilterOptions/filterOptions";

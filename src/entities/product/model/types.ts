@@ -44,3 +44,9 @@ export type tSetQuantity = {
   article: string;
   quantity: number;
 };
+
+export enum Status {
+  LOADING = "loading",
+  SUCCESS = "success",
+  ERROR = "error",
+}

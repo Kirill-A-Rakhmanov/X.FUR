@@ -1,19 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { tItemCard } from "../types";
+import { Status, tItemCard } from "../types";
 import { getItems } from "../services";
 import { mapProductCardData, queryParams } from "@/entities/entities";
 import { RootState } from "@/app/store/store";
 
-interface tTrendingState {
+interface iTrendingState {
   items: tItemCard[];
   status: Status;
-}
-
-enum Status {
-  LOADING = "loading",
-  SUCCESS = "success",
-  ERROR = "error",
 }
 
 export const fetchTrendingProducts = createAsyncThunk(
@@ -26,7 +20,7 @@ export const fetchTrendingProducts = createAsyncThunk(
   }
 );
 
-const initialState: tTrendingState = {
+const initialState: iTrendingState = {
   items: [],
   status: Status.LOADING,
 };
@@ -57,6 +51,7 @@ export const trendingSlice = createSlice({
 
 export const {} = trendingSlice.actions;
 
+export const selectTrending = (state: RootState) => state.trending;
 export const selectTrendingItems = (state: RootState) => state.trending.items;
 export const selectTrendingStatus = (state: RootState) => state.trending.status;
 

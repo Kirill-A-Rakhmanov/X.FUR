@@ -1,19 +1,13 @@
 import { RootState } from "@/app/store/store";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { tItemCard } from "../types";
+import { Status, tItemCard } from "../types";
 import { getItems } from "../services";
 import { mapProductCardData, queryParams } from "@/entities/entities";
 
 interface iProductsState {
   items: tItemCard[];
   status: Status;
-}
-
-enum Status {
-  LOADING = "loading",
-  SUCCESS = "success",
-  ERROR = "error",
 }
 
 const initialState: iProductsState = {
@@ -56,5 +50,7 @@ export const productsSlice = createSlice({
 });
 
 export const {} = productsSlice.actions;
+
+export const selectProducts = (state: RootState) => state.products;
 
 export default productsSlice.reducer;

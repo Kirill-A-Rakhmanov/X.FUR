@@ -4,13 +4,13 @@ import { RootState } from "@/app/store/store";
 import { tItemCard, tSetQuantity } from "../types";
 import { calcTotalPrice, calcTotalQuantity } from "../services";
 
-interface tTrendingState {
+interface iFavoriteState {
   items: tItemCard[];
   totalQuantity: number;
   totalPrice: number;
 }
 
-const initialState: tTrendingState = {
+const initialState: iFavoriteState = {
   items: [],
   totalQuantity: 0,
   totalPrice: 0,

@@ -11,7 +11,7 @@ export const getItems = async (params?: queryParams) => {
       return response.data;
     })
     .catch((error) => {
-      return [];
+      return [] as tItem[];
     });
   return data;
 };
@@ -23,7 +23,7 @@ export const getItemById = async (id: string) => {
       return response.data;
     })
     .catch((error) => {
-      return {};
+      return {} as tItem;
     });
   return data;
 };
@@ -35,7 +35,7 @@ export const getItemByArticle = async (articles: string) => {
       return response.data[0];
     })
     .catch((error) => {
-      return {};
+      return {} as tItem;
     });
   return data;
 };

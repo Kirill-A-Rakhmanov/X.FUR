@@ -2,6 +2,8 @@ import {
   cartSlice,
   favoriteSlice,
   filterSlice,
+  optionsSlice,
+  productItemSlice,
   productsSlice,
   trendingSlice,
 } from "@/entities/entities";
@@ -14,6 +16,8 @@ export const store = configureStore({
     cart: cartSlice.reducer,
     products: productsSlice.reducer,
     filter: filterSlice.reducer,
+    options: optionsSlice.reducer,
+    productItem: productItemSlice.reducer,
   },
 });
 

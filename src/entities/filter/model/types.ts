@@ -10,8 +10,18 @@ export type queryParams = {
   search?: string;
 };
 
-export type tSortBy = {
+export type tSortOption = {
   title: string;
   sortType: string;
   order: tOrder;
+};
+
+export type tCategoryOption = {
+  title: string;
+  category: string;
+};
+
+export type tCollectionOption = {
+  title: string;
+  collection: string;
 };

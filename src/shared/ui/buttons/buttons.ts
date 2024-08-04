@@ -6,3 +6,5 @@ export * from "./TrashButton/TrashButton";
 export * from "./MinusButton/MinusButton";
 export * from "./PlusButton/PlusButton";
 export * from "./LinkButton/LinkButton";
+export * from "./CurrentFilterButton/CurrentFilterButton";
+export * from "./SecondaryButton/SecondaryButton";

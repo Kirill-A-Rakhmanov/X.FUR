@@ -1,4 +1,4 @@
-import { Cart, Catalog, Favorite, Home, Layout } from "@/pages/pages";
+import { Cart, Catalog, Favorite, Home, Layout, Product } from "@/pages/pages";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 const routes: RouteObject[] = [
@@ -21,6 +21,10 @@ const routes: RouteObject[] = [
       {
         path: "catalog",
         element: <Catalog />,
+      },
+      {
+        path: "product/:article",
+        element: <Product />,
       },
     ],
   },

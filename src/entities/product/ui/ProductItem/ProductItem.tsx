@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./ProductItem.module.scss";
+import { Link } from "react-router-dom";
 
 type tProps = {
   title: string;
@@ -26,9 +27,9 @@ export const ProductItem = React.memo((props: tProps) => {
   //todo: добавиь сюда ссылку на страницу товара через Link и артикул
   return (
     <div className={styles.item}>
-      <div className={styles.image}>
+      <Link to={`/product/${article}`} className={styles.image}>
         <img src={image} alt={title} />
-      </div>
+      </Link>
       <div className={styles.title}>{title}</div>
       <div className={styles.subtitle}>{subtitle}</div>
       <div className={styles.info}>

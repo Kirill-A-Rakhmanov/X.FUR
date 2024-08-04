@@ -57,7 +57,13 @@ export const filterSlice = createSlice({
         : state.search;
     },
     clearFilter(state) {
-      state = initialState;
+      state.sortby = "";
+      state.order = "asc";
+      state.page = "";
+      state.limit = "";
+      state.collection = "";
+      state.category = "";
+      state.search = "";
     },
   },
 });
