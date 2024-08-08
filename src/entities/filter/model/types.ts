@@ -1,4 +1,4 @@
-export type tOrder = "asc" | "desc";
+export type tOrder = "asc" | "desc" | "";
 
 export type queryParams = {
   sortby?: string;

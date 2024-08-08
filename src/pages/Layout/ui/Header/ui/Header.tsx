@@ -25,6 +25,9 @@ export const Header = () => {
           </div>
         </div>
         <div className={styles.info}>
+          <Link className={styles.catalog} to={"/catalog"}>
+            Catalog
+          </Link>
           <FavoriteIndicator />
           <CartIndicator />
         </div>

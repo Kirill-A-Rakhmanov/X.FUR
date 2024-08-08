@@ -20,11 +20,17 @@ export type tColor = {
   images: string[];
 };
 
+export type tColorOption = {
+  article: string;
+  color: string;
+  image: string;
+};
+
 export type tMeasurements = {
   image?: string;
   length?: string;
   width?: string;
-  heigth?: string;
+  height?: string;
   depth?: string;
 };
 
@@ -38,6 +44,14 @@ export type tItemCard = {
   article: string;
   image: string;
   quantity?: number;
+};
+
+export type tItemBuyInfo = {
+  title: string;
+  subtitle: string;
+  color: string;
+  size?: string;
+  price: number;
 };
 
 export type tSetQuantity = {

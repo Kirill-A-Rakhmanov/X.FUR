@@ -35,7 +35,11 @@ export const Trending = () => {
         <h2 className={styles.header}>Trending now</h2>
         <div className={styles.content}>
           <ScrollableArea
-            content={<ProductRow items={items} status={status} />}
+            content={
+              <div className={styles.row}>
+                <ProductRow items={items} status={status} />
+              </div>
+            }
           />
         </div>
       </div>

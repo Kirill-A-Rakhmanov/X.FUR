@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Gallery.module.scss";
+import styles from "./CollectionGallery.module.scss";
 
 const imageUrls: string[] = [
   "https://www.ikea.com/ext/ingkadam/m/4519147690d535ea/original/PH191697.jpg?f=xs",
@@ -11,7 +11,7 @@ const imageUrls: string[] = [
   "https://www.ikea.com/ext/ingkadam/m/2e6c72167c491f8d/original/PH190441.jpg?f=xs",
 ];
 
-export const Gallery = () => {
+export const CollectionGallery = () => {
   return (
     <div className={styles.gallery}>
       {imageUrls.map((value, index) => (

@@ -9,8 +9,6 @@
 }
 
 .items {
-  display: flex;
-  gap: 20px;
   overflow-x: scroll;
   scrollbar-width: none;
   scroll-behavior: smooth;
@@ -18,16 +16,6 @@
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  & > * {
-    flex: 0 0 280px;
-    @media (max-width: 768px) {
-      flex: 0 0 200px;
-    }
-    @media (max-width: 540px) {
-      flex: 0 0 120px;
-    }
   }
 }
 .scrollRight,

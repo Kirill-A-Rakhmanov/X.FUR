@@ -11,7 +11,7 @@ export const ScrollableArea = ({ content }: tProps) => {
   const itemsContainerRef = React.useRef(null);
   const scrollPosition = React.useRef<number>(0);
   const scrollStep = React.useRef<number>(0);
-  const [scrollOnRight, setScrollOnRight] = React.useState(false);
+  const [scrollOnRight, setScrollOnRight] = React.useState(true);
   const [scrollOnLeft, setScrollOnLeft] = React.useState(true);
 
   function handleScroll() {
@@ -49,6 +49,7 @@ export const ScrollableArea = ({ content }: tProps) => {
     }
 
     calcScrollStep();
+    handleScroll();
 
     window.addEventListener("resize", calcScrollStep);
     return () => {

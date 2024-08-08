@@ -5,7 +5,7 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: queryParams = {
   sortby: "",
-  order: "asc",
+  order: "",
   page: "",
   limit: "",
   collection: "",
@@ -58,11 +58,11 @@ export const filterSlice = createSlice({
     },
     clearFilter(state) {
       state.sortby = "";
-      state.order = "asc";
+      state.order = "";
+      state.category = "";
+      state.collection = "";
       state.page = "";
       state.limit = "";
-      state.collection = "";
-      state.category = "";
       state.search = "";
     },
   },

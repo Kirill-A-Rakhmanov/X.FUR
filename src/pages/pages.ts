@@ -4,3 +4,4 @@ export * from "./Favorites/favorite";
 export * from "./Cart/cart";
 export * from "./Catalog/catalog";
 export * from "./Product/product";
+export * from "./NotFound/notFound";

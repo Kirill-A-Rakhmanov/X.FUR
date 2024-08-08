@@ -1,35 +1,28 @@
 import React from "react";
 
 import styles from "./ProductBlock.module.scss";
-import { useAppDispatch, useAppSelector } from "@/app/store/hooks";
+import { useAppSelector } from "@/app/store/hooks";
 import {
-  clearItemData,
-  fetchItemData,
   mapImagesByArticle,
+  mapProductDataByArticle,
   selectProductItem,
+  Status,
 } from "@/entities/entities";
-import { ProductGalery } from "./ProductGalery/ProductGalery";
+import {
+  BuyModule,
+  ColorPicker,
+  Description,
+  ProductGallery,
+  ProductGallerySkeleton,
+} from "@/widgets/widgets";
+import { ProductBlockSkeleton } from "./ProductBlockSkeleton";
 
 type tProps = {
   article: string;
 };
 
 export const ProductBlock = ({ article }: tProps) => {
-  const dispatch = useAppDispatch();
   const { item, status } = useAppSelector(selectProductItem);
-
-  React.useEffect(() => {
-    dispatch(fetchItemData(article));
-
-    return () => {
-      dispatch(clearItemData());
-    };
-  }, [article]);
-
-  const images = mapImagesByArticle(item, article);
-  // console.log(images);
-  // console.log("render");
-  console.log(status);
 
   return (
     <section className={styles.productBlock}>
@@ -40,8 +33,22 @@ export const ProductBlock = ({ article }: tProps) => {
         ].join(" ")}
       >
         <div className={styles.content}>
-          <ProductGalery />
-          {article}
+          {status === Status.SUCCESS ? (
+            <>
+              <ProductGallery images={mapImagesByArticle(item, article)} />
+              <div className={styles.buyModule}>
+                <BuyModule item={mapProductDataByArticle(item, article)} />
+                <ColorPicker
+                  item={mapProductDataByArticle(item, article)}
+                  article={article}
+                  colorOptions={item.colors}
+                />
+              </div>
+              <Description item={item} article={article} />
+            </>
+          ) : (
+            <ProductBlockSkeleton />
+          )}
         </div>
       </div>
     </section>

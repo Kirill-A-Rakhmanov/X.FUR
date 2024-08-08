@@ -3,11 +3,11 @@ import { tColor, tItem } from "../product";
 export const mapImagesByArticle = (data: tItem, article: string) => {
   const findItem: tColor = data.colors.find((obj) => obj.article === article);
   if (findItem) {
-    const images: string[] = findItem.images;
+    const images: string[] = data.measurements.image
+      ? [...findItem.images, data.measurements.image]
+      : findItem.images;
 
-    return data.measurements.image
-      ? [...images, data.measurements.image]
-      : images;
+    return images as string[];
   }
   return [];
 };

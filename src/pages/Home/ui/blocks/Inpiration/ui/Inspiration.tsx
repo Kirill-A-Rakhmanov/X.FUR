@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./Inspiration.module.scss";
-import { Categories, Gallery } from "@/widgets/widgets";
+import { Categories, CollectionGallery } from "@/widgets/widgets";
 
 export const Inspiration = () => {
   return (
@@ -17,7 +17,7 @@ export const Inspiration = () => {
             More ideas and inspiration from your great value furniture store
           </h2>
           <Categories />
-          <Gallery />
+          <CollectionGallery />
         </div>
       </div>
     </section>
