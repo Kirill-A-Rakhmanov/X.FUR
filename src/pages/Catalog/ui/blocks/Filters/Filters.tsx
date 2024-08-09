@@ -23,7 +23,6 @@ export const Filters = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { order, sortby, collection, category } = useAppSelector(selectFilter);
-  const params = useAppSelector(selectFilter);
   const { sortOptions, categoryOptions, collectionOptions } =
     useAppSelector(selectOptions);
   const isMounted = React.useRef(false);
@@ -40,14 +39,9 @@ export const Filters = () => {
       const queryParams = qs.stringify(params);
 
       navigate(`?${queryParams}`);
-    }
-  }, [sortby, order, collection, category]);
-
-  React.useEffect(() => {
-    if (isMounted.current) {
       dispatch(fetchItems(params));
     }
-  }, [params]);
+  }, [sortby, order, collection, category]);
 
   // вызывается при первом рендере и должно устанавливать параметры фильтрации, если они есть в ссылке
   React.useEffect(() => {
@@ -55,7 +49,7 @@ export const Filters = () => {
       const params = qs.parse(window.location.search.substring(1));
       dispatch(setFilter(params));
     } else {
-      dispatch(fetchItems(params));
+      dispatch(fetchItems({}));
     }
     isMounted.current = true;
 

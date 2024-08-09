@@ -9,3 +9,4 @@ export * from "./RemoveFromFavorite/removeFromFavorite";
 export * from "./ChangeQuantity/changeQuantity";
 export * from "./ChooseOption/chooseOption";
 export * from "./ClearFilter/clearFilter";
+export * from "./Search/Search";

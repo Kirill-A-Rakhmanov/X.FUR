@@ -46,6 +46,19 @@ export type tItemCard = {
   quantity?: number;
 };
 
+export type tItemSearch = {
+  article: string;
+  image: string;
+  title: string;
+  subtitle: string;
+};
+
+export type tSuggestedOption = {
+  title: string;
+  path: string;
+  value: string;
+};
+
 export type tItemBuyInfo = {
   title: string;
   subtitle: string;

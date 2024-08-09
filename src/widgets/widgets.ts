@@ -11,3 +11,5 @@ export * from "./ImagesRow/imagesRow";
 export * from "./ColorPicker/colorPicker";
 export * from "./Measurements/measurements";
 export * from "./Description/description";
+export * from "./SearchField/searchField";
+export * from "./SearchResult/searchResult";

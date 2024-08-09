@@ -5,6 +5,7 @@ import {
   optionsSlice,
   productItemSlice,
   productsSlice,
+  searchSlice,
   trendingSlice,
 } from "@/entities/entities";
 import { configureStore } from "@reduxjs/toolkit";
@@ -18,6 +19,7 @@ export const store = configureStore({
     filter: filterSlice.reducer,
     options: optionsSlice.reducer,
     productItem: productItemSlice.reducer,
+    search: searchSlice.reducer,
   },
 });
 
