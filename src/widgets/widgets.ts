@@ -13,3 +13,4 @@ export * from "./Measurements/measurements";
 export * from "./Description/description";
 export * from "./SearchField/searchField";
 export * from "./SearchResult/searchResult";
+export * from "./CollectionPopup/collectionPopup";

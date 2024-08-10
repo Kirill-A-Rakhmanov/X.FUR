@@ -1,5 +1,6 @@
 import {
   cartSlice,
+  collectionSlice,
   favoriteSlice,
   filterSlice,
   optionsSlice,
@@ -20,6 +21,7 @@ export const store = configureStore({
     options: optionsSlice.reducer,
     productItem: productItemSlice.reducer,
     search: searchSlice.reducer,
+    collection: collectionSlice.reducer,
   },
 });
 
