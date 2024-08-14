@@ -3,3 +3,9 @@ export type tCollection = {
   image: string;
   items: string[];
 };
+
+export type tCollectionCategory = {
+  title: string;
+  value: string;
+  id: number;
+};

@@ -10,6 +10,7 @@ export const CollectionGallery = () => {
   const [activeCollection, setActiveCollection] = React.useState<
     tCollection | undefined
   >();
+  const [randomIndex, setRandomIndex] = React.useState(0);
 
   const handleClick = (collection: tCollection) => {
     setActiveCollection(collection);
@@ -19,10 +20,17 @@ export const CollectionGallery = () => {
     setActiveCollection(undefined);
   };
 
+  React.useEffect(() => {
+    const randomIntFromInterval = (min: number, max: number) => {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    };
+    setRandomIndex(randomIntFromInterval(0, 6));
+  }, []);
+
   return (
     <>
       <div className={styles.gallery}>
-        {items.slice(-6).map((obj, index) => (
+        {items.slice(randomIndex, randomIndex + 6).map((obj, index) => (
           <button
             onClick={() => handleClick(obj)}
             key={index}

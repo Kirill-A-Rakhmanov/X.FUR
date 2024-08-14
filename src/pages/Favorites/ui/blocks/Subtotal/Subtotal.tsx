@@ -4,13 +4,14 @@ import styles from "./Subtotal.module.scss";
 import { AddAllToCart } from "@/features/features";
 import { useAppSelector } from "@/app/store/hooks";
 import { selectFavoriteItems, selectFavoritePrice } from "@/entities/entities";
+import { Container } from "@/shared/shared";
 
 export const Subtotal = () => {
   const items = useAppSelector(selectFavoriteItems);
   const totalPrice = useAppSelector(selectFavoritePrice);
   return (
     <section className={styles.subtotal}>
-      <div className={[styles.container, "_container"].join(" ")}>
+      <Container className={styles.container}>
         <div className={styles.content}>
           <div className={styles.info}>
             <span className={styles.text}>Total price</span>
@@ -20,7 +21,7 @@ export const Subtotal = () => {
             <AddAllToCart items={items} />
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

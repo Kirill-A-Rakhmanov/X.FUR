@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./Footer.module.scss";
+import { Container } from "@/shared/shared";
 
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={[styles.container, "_container"].join(" ")}>
+      <Container className={styles.container}>
         <div className={styles.news}>
           <div className={styles.newsHeader}>Newsletter</div>
           <form className={styles.newsForm}>
@@ -50,7 +51,7 @@ export const Footer = () => {
           </nav>
           <div className={styles.label}>Built with love</div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

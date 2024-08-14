@@ -54,7 +54,14 @@
 }
 .image {
   position: relative;
+  width: 100%;
+  padding: 0px 0px 60% 0px;
   img {
+    position: absolute;
+    left: 0;
+    width: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

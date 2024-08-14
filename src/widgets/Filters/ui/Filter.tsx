@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./Filter.module.scss";
 import ArrowIcon from "@/assets/icons/arrow-right.svg";
 import { FilterPopup } from "@/widgets/widgets";
+import clsx from "clsx";
 
 type tProps = {
   title: string;
@@ -35,12 +36,10 @@ export const Filter = ({ list, title }: tProps) => {
       <div
         ref={sortRef}
         onClick={() => togglePopup()}
-        className={[styles.button, isOpen ? styles.active : ""].join(" ")}
+        className={clsx(styles.button, isOpen && styles.active)}
       >
         <span className={styles.title}>{title}</span>
-        <ArrowIcon
-          className={[styles.icon, isOpen ? styles.active : ""].join(" ")}
-        />
+        <ArrowIcon className={clsx(styles.icon, isOpen && styles.active)} />
       </div>
       {isOpen && (
         <FilterPopup

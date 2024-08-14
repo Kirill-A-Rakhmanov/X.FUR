@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./CollectionPopup.module.scss";
 import { tCollection } from "@/entities/entities";
 import CloseIcon from "@/assets/icons/close.svg";
+import { CollectionCard } from "@/widgets/widgets";
 
 type tProps = {
   collection: tCollection;
@@ -11,6 +12,18 @@ type tProps = {
 
 export const CollectionPopup = ({ collection, actionOnClose }: tProps) => {
   const dialogRef = React.useRef<HTMLDialogElement>(null);
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  // React.useEffect(() => {
+  //   const handleClickOutside = (e: MouseEvent) => {
+  //     if (!e.composedPath().includes(containerRef.current) && collection) {
+  //       closePopup();
+  //       console.log("close");
+  //     }
+  //   };
+  //   document.body.addEventListener("click", handleClickOutside);
+  //   return () => document.body.removeEventListener("click", handleClickOutside);
+  // }, []);
 
   React.useEffect(() => {
     if (!collection) return;
@@ -20,7 +33,10 @@ export const CollectionPopup = ({ collection, actionOnClose }: tProps) => {
 
     dialogRef.current.addEventListener("close", closePopup);
 
-    return () => dialogRef.current.removeEventListener("close", closePopup);
+    return () => {
+      closePopup();
+      dialogRef.current?.removeEventListener("close", closePopup);
+    };
   }, [collection]);
 
   const closePopup = () => {
@@ -31,7 +47,7 @@ export const CollectionPopup = ({ collection, actionOnClose }: tProps) => {
 
   return (
     <dialog ref={dialogRef} className={styles.backdrop}>
-      <div className={styles.container}>
+      <div ref={containerRef} className={styles.container}>
         <div className={styles.top}>
           <div className={styles.header}>
             More ideas and inspiration from your great value furniture store
@@ -44,7 +60,7 @@ export const CollectionPopup = ({ collection, actionOnClose }: tProps) => {
           </div>
           <div className={styles.list}>
             {collection?.items.map((article, index) => (
-              <div>{article}</div>
+              <CollectionCard key={index} article={article} />
             ))}
           </div>
         </div>

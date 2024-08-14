@@ -24,7 +24,6 @@ export const ProductItem = React.memo((props: tProps) => {
     actionAddToFavorite,
   } = props;
 
-  //todo: добавиь сюда ссылку на страницу товара через Link и артикул
   return (
     <div className={styles.item}>
       <Link to={`/product/${article}`} className={styles.image}>

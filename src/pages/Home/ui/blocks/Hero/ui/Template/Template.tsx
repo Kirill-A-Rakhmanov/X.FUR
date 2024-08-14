@@ -4,6 +4,7 @@ import styles from "./Template.module.scss";
 import { Link } from "react-router-dom";
 import { queryParams } from "@/entities/entities";
 import qs from "query-string";
+import clsx from "clsx";
 
 type tProps = {
   collection: string;
@@ -13,7 +14,7 @@ type tProps = {
   size?: string;
 };
 
-const Template = ({ img, alt, header, size, collection }: tProps) => {
+const Template: React.FC<tProps> = ({ img, alt, header, size, collection }) => {
   const params: queryParams = {
     collection,
   };
@@ -23,7 +24,7 @@ const Template = ({ img, alt, header, size, collection }: tProps) => {
   return (
     <Link
       to={`/catalog?${queryParams}`}
-      className={[styles.template, size ? styles[size] : ""].join(" ")}
+      className={clsx(styles.template, size && styles[size])}
     >
       <img className={styles.cover} src={img} alt={alt} />
       <h2 className={styles.title}>{header}</h2>

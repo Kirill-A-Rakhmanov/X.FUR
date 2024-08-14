@@ -12,7 +12,6 @@ export const ProductGallery = ({ images }: tProps) => {
 
   const handleClick = (e: React.MouseEvent) => {
     setActiveIndex(Number(e.currentTarget.getAttribute("data-index")));
-    console.log(activeIndex);
   };
 
   return (

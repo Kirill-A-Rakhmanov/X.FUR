@@ -15,6 +15,7 @@ import { Search } from "@/features/features";
 import { useAppDispatch, useAppSelector } from "@/app/store/hooks";
 import { useDebounce } from "@/shared/shared";
 import { SearchResult } from "@/widgets/widgets";
+import clsx from "clsx";
 
 export const SearchField = () => {
   const dispatch = useAppDispatch();
@@ -58,27 +59,27 @@ export const SearchField = () => {
     <div className={styles.wrapper}>
       <div
         ref={searchRef}
-        className={[styles.dropdown, isOpen ? styles.open : ""].join(" ")}
+        className={clsx(styles.dropdown, isOpen && styles.open)}
       >
         <div onClick={() => openPopup()} className={styles.input}>
           <SearchIcon
-            className={[
+            className={clsx(
               styles.searchIcon,
-              search ? styles.active : "",
-              isOpen ? styles.open : "",
-            ].join(" ")}
+              search && styles.active,
+              isOpen && styles.open
+            )}
           />
           <BackIcon
             onClick={() => closePopup()}
-            className={[styles.back, isOpen ? styles.active : ""].join(" ")}
+            className={clsx(styles.back, isOpen && styles.active)}
           />
           <Search search={search} />
           <ClearIcon
             onClick={() => clearSearch()}
-            className={[styles.clear, isOpen ? styles.active : ""].join(" ")}
+            className={clsx(styles.clear, isOpen && styles.active)}
           />
         </div>
-        <div className={[styles.results, isOpen ? styles.open : ""].join(" ")}>
+        <div className={clsx(styles.results, isOpen && styles.open)}>
           <SearchResult
             onChoose={() => {
               closePopup();

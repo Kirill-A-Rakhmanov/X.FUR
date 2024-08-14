@@ -16,7 +16,6 @@ export function buildPlugins(options: BuildOptions): Configuration["plugins"] {
   const plugins: Configuration["plugins"] = [
     new HtmlWebpackPlugin({
       template: paths.html,
-      //TODO: Сделать так, что бы иконка отображалась
       favicon: path.resolve(paths.public, "favicon.ico"),
     }),
     new DefinePlugin({

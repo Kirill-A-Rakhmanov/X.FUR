@@ -16,6 +16,7 @@ import {
   ProductGallerySkeleton,
 } from "@/widgets/widgets";
 import { ProductBlockSkeleton } from "./ProductBlockSkeleton";
+import { Container } from "@/shared/shared";
 
 type tProps = {
   article: string;
@@ -26,12 +27,7 @@ export const ProductBlock = ({ article }: tProps) => {
 
   return (
     <section className={styles.productBlock}>
-      <div
-        className={[
-          styles.container ? styles.container : "",
-          "_container",
-        ].join(" ")}
-      >
+      <Container className={styles.container}>
         <div className={styles.content}>
           {status === Status.SUCCESS ? (
             <>
@@ -50,7 +46,7 @@ export const ProductBlock = ({ article }: tProps) => {
             <ProductBlockSkeleton />
           )}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

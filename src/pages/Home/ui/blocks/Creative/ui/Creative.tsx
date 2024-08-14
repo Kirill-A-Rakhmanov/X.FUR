@@ -1,18 +1,20 @@
 import React from "react";
 
 import styles from "./Creative.module.scss";
-import sofaImg from "@/assets/img/02 creative/sofa.jpg";
-import { LinkButton } from "@/shared/shared";
+import { Container, LinkButton } from "@/shared/shared";
+import { getItemByArticle } from "@/entities/entities";
 
 export const Creative = () => {
+  const article = "29228205";
+  const [image, setImage] = React.useState<string>("");
+
+  React.useEffect(() => {
+    getItemByArticle(article).then((res) => setImage(res.colors[0].images[2]));
+  }, []);
+
   return (
     <section className={styles.creative}>
-      <div
-        className={[
-          styles.container ? styles.container : "",
-          "_container",
-        ].join(" ")}
-      >
+      <Container className={styles.container}>
         <div className={styles.content}>
           <div className={styles.info}>
             <div className={styles.infoWrapper}>
@@ -21,15 +23,14 @@ export const Creative = () => {
                 X.FUR products are made with care to fit perfectly in your
                 interior
               </div>
-              <LinkButton link={"/products/"} text={"SHOP NOW"} />
-              {/* todo: поставить в ссылку артикул */}
+              <LinkButton link={`/product/${article}`} text={"SHOP NOW"} />
             </div>
           </div>
           <div className={styles.image}>
-            <img src={sofaImg} alt="sofa" />
+            <img src={image} alt="sofa" />
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

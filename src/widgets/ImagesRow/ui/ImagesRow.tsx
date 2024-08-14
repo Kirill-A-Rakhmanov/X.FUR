@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./ImagesRow.module.scss";
+import clsx from "clsx";
 
 type tProps = {
   images: string[];
@@ -16,10 +17,10 @@ export const ImagesRow = ({ images, activeIndex, onClick }: tProps) => {
           key={index}
           data-index={index}
           onClick={onClick}
-          className={[
+          className={clsx(
             styles.wrapper,
-            activeIndex === index ? styles.active : "",
-          ].join(" ")}
+            activeIndex === index && styles.active
+          )}
         >
           <div className={styles.image}>
             <img src={url} alt="" />

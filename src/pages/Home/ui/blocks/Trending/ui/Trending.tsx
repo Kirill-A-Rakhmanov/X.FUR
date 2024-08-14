@@ -5,6 +5,7 @@ import { ScrollableArea } from "@/widgets/widgets";
 import { ProductRow } from "@/widgets/ProductRow/productRow";
 import { useAppDispatch, useAppSelector } from "@/app/store/hooks";
 import { fetchTrendingProducts, selectTrending } from "@/entities/entities";
+import { Container } from "@/shared/shared";
 
 export const Trending = () => {
   const dispatch = useAppDispatch();
@@ -26,12 +27,7 @@ export const Trending = () => {
 
   return (
     <section className={styles.trending}>
-      <div
-        className={[
-          styles.container ? styles.container : "",
-          "_container",
-        ].join(" ")}
-      >
+      <Container className={styles.container}>
         <h2 className={styles.header}>Trending now</h2>
         <div className={styles.content}>
           <ScrollableArea
@@ -42,7 +38,7 @@ export const Trending = () => {
             }
           />
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./Measurements.module.scss";
 import { tMeasurements } from "@/entities/entities";
 import ArrowIcon from "@/assets/icons/arrow-right.svg";
+import clsx from "clsx";
 
 type tProps = {
   measurements: tMeasurements;
@@ -19,11 +20,9 @@ export const Measurements = ({ measurements }: tProps) => {
     <div className={styles.wrapper}>
       <button onClick={() => togglePopup()} className={styles.button}>
         <span className={styles.title}>Measurements</span>
-        <ArrowIcon
-          className={[styles.icon, isOpen ? styles.active : ""].join(" ")}
-        />
+        <ArrowIcon className={clsx(styles.icon, isOpen && styles.active)} />
       </button>
-      <div className={[styles.popup, isOpen ? styles.active : ""].join(" ")}>
+      <div className={clsx(styles.popup, isOpen && styles.active)}>
         <div className={styles.content}>
           <div className={styles.measurements}>
             {measurements.length && (

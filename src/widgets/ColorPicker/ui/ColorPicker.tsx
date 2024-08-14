@@ -4,6 +4,7 @@ import styles from "./ColorPicker.module.scss";
 import { tColor, tItemCard } from "@/entities/entities";
 import { Link } from "react-router-dom";
 import { AddOneToCart } from "@/features/features";
+import clsx from "clsx";
 
 type tProps = {
   colorOptions: tColor[];
@@ -21,10 +22,10 @@ export const ColorPicker = ({ colorOptions, article, item }: tProps) => {
           <Link
             to={`/product/${option.article}`}
             key={index}
-            className={[
+            className={clsx(
               styles.option,
-              article === option.article ? styles.active : "",
-            ].join(" ")}
+              article === option.article && styles.active
+            )}
           >
             <div className={styles.image}>
               <img src={option.images[0]} alt={option.color} />

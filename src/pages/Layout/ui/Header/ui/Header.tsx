@@ -6,11 +6,12 @@ import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 import { CartIndicator, FavoriteIndicator } from "@/features/features";
 import { SearchField } from "@/widgets/widgets";
+import { Container } from "@/shared/shared";
 
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.container + " _container"}>
+      <Container className={styles.container}>
         <Link to={"/"} className={styles.logo}>
           <img src={logo} alt="logo" />
         </Link>
@@ -24,7 +25,7 @@ export const Header = () => {
           <FavoriteIndicator />
           <CartIndicator />
         </div>
-      </div>
+      </Container>
     </header>
   );
 };

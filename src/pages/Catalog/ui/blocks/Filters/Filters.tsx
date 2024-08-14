@@ -18,6 +18,7 @@ import {
   setFilter,
 } from "@/entities/entities";
 import { useNavigate } from "react-router-dom";
+import { Container } from "@/shared/shared";
 
 export const Filters = () => {
   const navigate = useNavigate();
@@ -60,7 +61,7 @@ export const Filters = () => {
 
   return (
     <section className={styles.filters}>
-      <div className={[styles.container, "_container"].join(" ")}>
+      <Container className={styles.container}>
         <div className={styles.content}>
           <Filter title={"Sort"} list={<SortOptions options={sortOptions} />} />
           <Filter
@@ -72,7 +73,7 @@ export const Filters = () => {
             list={<CollectionOptions options={collectionOptions} />}
           />
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

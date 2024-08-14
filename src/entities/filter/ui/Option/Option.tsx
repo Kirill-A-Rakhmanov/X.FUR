@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./Option.module.scss";
+import clsx from "clsx";
 
 type tProps = {
   title: string;
@@ -14,9 +15,7 @@ export const Option = ({ title, active, onClick }: tProps) => {
       <div className={styles.title}>{title}</div>
       <div className={styles.radio}>
         <div
-          className={[styles.radioSymbol, active ? styles.active : ""].join(
-            " "
-          )}
+          className={clsx(styles.radioSymbol, active && styles.active)}
         ></div>
       </div>
     </li>

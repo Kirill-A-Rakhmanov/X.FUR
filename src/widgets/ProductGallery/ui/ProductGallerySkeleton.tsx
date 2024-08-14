@@ -10,8 +10,8 @@ export const ProductGallerySkeleton = () => {
       <div className={styles.containerSkeleton}>
         {Array(4)
           .fill(0)
-          .map(() => (
-            <Skeleton className={styles.imgSkeleton} />
+          .map((_, index) => (
+            <Skeleton key={index} className={styles.imgSkeleton} />
           ))}
       </div>
     </div>

@@ -11,8 +11,8 @@ export const ColorPickerSkeleton = () => {
       <div className={styles.options}>
         {Array(3)
           .fill(0)
-          .map(() => (
-            <Skeleton className={styles.optionSkeleton} />
+          .map((_, index) => (
+            <Skeleton key={index} className={styles.optionSkeleton} />
           ))}
       </div>
       <div className={styles.action}>

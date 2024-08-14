@@ -7,6 +7,7 @@ import electronicsImg from "@/assets/img/01 hero/electronics.jpg";
 
 import styles from "./Hero.module.scss";
 import Template from "./Template/Template";
+import { Container } from "@/shared/shared";
 
 export const Hero = () => {
   const templates = [
@@ -41,7 +42,7 @@ export const Hero = () => {
 
   return (
     <section className={styles.hero}>
-      <div className={[styles.container && "", "_container"].join(" ")}>
+      <Container className={styles.container}>
         <div className={styles.content}>
           {templates.map((obj, index) => (
             <Template
@@ -54,7 +55,7 @@ export const Hero = () => {
             />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
