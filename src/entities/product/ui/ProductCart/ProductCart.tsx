@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "./ProductCart.module.scss";
+import { Link } from "react-router-dom";
 
 type tProps = {
   id: string;
@@ -17,7 +18,7 @@ type tProps = {
   actionRemoveFromCart: React.ReactNode;
 };
 
-export const ProductCart = (props: tProps) => {
+export const ProductCart = React.memo((props: tProps) => {
   const {
     id,
     title,
@@ -38,9 +39,9 @@ export const ProductCart = (props: tProps) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.visuals}>
-        <div className={styles.image}>
+        <Link to={`/product/${article}`} className={styles.image}>
           <img src={image} alt={title} />
-        </div>
+        </Link>
         <div className={styles.article}>{article}</div>
       </div>
       <div className={styles.info}>
@@ -63,6 +64,6 @@ export const ProductCart = (props: tProps) => {
       </div>
     </div>
   );
-};
+});
 
 //  + size ? `, ${size}` : ""

@@ -9,7 +9,7 @@ type tProps = {
   onClick: React.MouseEventHandler;
 };
 
-export const Option = ({ title, active, onClick }: tProps) => {
+export const Option: React.FC<tProps> = ({ title, active, onClick }) => {
   return (
     <li onClick={onClick} className={styles.wrapper}>
       <div className={styles.title}>{title}</div>
