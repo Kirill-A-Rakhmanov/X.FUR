@@ -43,6 +43,8 @@ const routes: RouteObject[] = [
   },
 ];
 
-export const router = createBrowserRouter(routes, { basename: "/x-fur" });
+export const router = createBrowserRouter(routes);
 
 export default routes;
+
+// { basename: "/x-fur" }
