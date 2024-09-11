@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirill-a-rakhmanov/x-fur.git"
+  },
   "homepage": "https://kirill-a-rakhmanov.github.io/x-fur/",
   "scripts": {
     "start": "webpack serve --env mode=development",
