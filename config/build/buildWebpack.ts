@@ -17,7 +17,7 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
     output: {
       path: paths.output,
       filename: "bundle.[contenthash].js",
-      publicPath: "/",
+      publicPath: "/x-fur/",
       clean: true,
     },
     plugins: buildPlugins(options),
